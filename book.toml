@@ -8,3 +8,4 @@ title = "Angular Book"
 [output.html]
 git-repository-url = "https://github.com/DenysVuika/angular-book"
 cname = "angular-book.dev"
+google-analytics = "G-23X2CQXZ48"
