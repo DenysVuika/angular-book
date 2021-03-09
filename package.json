@@ -33,13 +33,15 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
-    "@nrwl/tao": "11.4.0",
+    "@nrwl/angular": "^11.4.0",
     "@nrwl/cli": "11.4.0",
+    "@nrwl/tao": "11.4.0",
+    "@nrwl/web": "^11.4.0",
     "@nrwl/workspace": "11.4.0",
     "@types/node": "12.12.38",
     "dotenv": "6.2.0",
+    "prettier": "2.2.1",
     "ts-node": "~9.1.1",
-    "typescript": "~4.0.3",
-    "prettier": "2.2.1"
+    "typescript": "~4.0.3"
   }
 }
