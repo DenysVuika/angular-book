@@ -30,3 +30,13 @@ please don't hesitate and contact me using the next email address:
 You are also invited to raise issues for the source code and examples using corresponding [issue tracker](https://github.com/DenysVuika/angular-book/issues) at GitHub.
 
 Feel free to raise feature requests and suggestions on what you would like to see next.
+
+## Other publications
+
+You can find many other interesting publications at my [Blog](https://denys.dev/).
+
+## Testimonials
+
+Your feedback on the book content is very appreciated.
+I would love to publish your photo and testimonial on the web page of the book.
+Email me at: [denys.vuika@gmail.com](mailto:denys.vuika@gmail.com?subject=angular-book%20testimonial).
