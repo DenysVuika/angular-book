@@ -5,13 +5,13 @@
 
 ## Prerequisites
 
-- [Prerequisites](ch00-01-prerequisites.md)
-  - [Node]()
-  - [Visual Studio Code]()
+- [Prerequisites](ch01-00-prerequisites.md)
+  - [Node](ch01-01-node.md)
+  - [Visual Studio Code](ch01-02-vscode.md)
 
 ## ES6
 
-- [ES6](ch01-00-es6.md)
+- [ES6](ch02-00-es6.md)
   - [Classes]()
   - [Inheritance]()
   - [Arrow Functions]()
