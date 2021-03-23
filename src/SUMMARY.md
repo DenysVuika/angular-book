@@ -23,9 +23,9 @@
 
 ## TypeScript
 
-- [TypeScript]()
-  - [Getting Started with TypeScript]()
-  - [TypeScript Features]()
+- [TypeScript](ch03-00-typescript.md)
+  - [Getting Started](ch03-01-getting-started.md)
+  - [TypeScript Features](ch03-02-features.md)
 
 ## Angular
 
