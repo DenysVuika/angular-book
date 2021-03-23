@@ -12,13 +12,14 @@
 ## ES6
 
 - [ES6](ch02-00-es6.md)
-  - [Classes]()
-  - [Inheritance]()
-  - [Arrow Functions]()
-  - [Template Literals]()
-  - [Extended Parameter Handling]()
-  - [Destructuring assignment]()
-  - [See also]()
+  - [Classes](ch02-01-classes.md)
+  - [Inheritance](ch02-02-inheritance.md)
+  - [Arrow Functions](ch02-03-arrow-functions.md)
+  - [Template Literals](ch02-04-template-literals.md)
+  - [Extended Parameter Handling](ch02-05-extended-parameters.md)
+  - [Destructuring Assignment](ch02-06-destructuring.md)
+  - [Modules](ch02-07-modules.md)
+  - [See Also](ch02-08-see-also.md)
 
 ## TypeScript
 
