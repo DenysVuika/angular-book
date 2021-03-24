@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Decorators - Angular Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Angular Book</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-prerequisites.html"><strong aria-hidden="true">1.</strong> Prerequisites</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-node.html"><strong aria-hidden="true">1.1.</strong> Node</a></li><li class="chapter-item expanded "><a href="ch01-02-vscode.html"><strong aria-hidden="true">1.2.</strong> Visual Studio Code</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-es6.html"><strong aria-hidden="true">2.</strong> ES6</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-classes.html"><strong aria-hidden="true">2.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch02-02-inheritance.html"><strong aria-hidden="true">2.2.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="ch02-03-arrow-functions.html"><strong aria-hidden="true">2.3.</strong> Arrow Functions</a></li><li class="chapter-item expanded "><a href="ch02-04-template-literals.html"><strong aria-hidden="true">2.4.</strong> Template Literals</a></li><li class="chapter-item expanded "><a href="ch02-05-extended-parameters.html"><strong aria-hidden="true">2.5.</strong> Extended Parameter Handling</a></li><li class="chapter-item expanded "><a href="ch02-06-destructuring.html"><strong aria-hidden="true">2.6.</strong> Destructuring Assignment</a></li><li class="chapter-item expanded "><a href="ch02-07-modules.html"><strong aria-hidden="true">2.7.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch02-08-see-also.html"><strong aria-hidden="true">2.8.</strong> See Also</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-typescript.html"><strong aria-hidden="true">3.</strong> TypeScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-getting-started.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch03-02-features.html"><strong aria-hidden="true">3.2.</strong> TypeScript Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-03-types.html"><strong aria-hidden="true">3.2.1.</strong> Types</a></li><li class="chapter-item expanded "><a href="ch03-04-classes.html"><strong aria-hidden="true">3.2.2.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch03-05-interfaces.html"><strong aria-hidden="true">3.2.3.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="ch03-06-abstract-classes.html"><strong aria-hidden="true">3.2.4.</strong> Abstract Classes</a></li><li class="chapter-item expanded "><a href="ch03-07-modules.html"><strong aria-hidden="true">3.2.5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch03-08-decorators.html" class="active"><strong aria-hidden="true">3.2.6.</strong> Decorators</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> Angular CLI</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.1.</strong> Installing</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.2.</strong> Your first application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.3.</strong> Running application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.4.</strong> Code Linting</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.5.</strong> Unit tests</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.6.</strong> Code coverage</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.7.</strong> Development and Production builds</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.8.</strong> Using blueprints</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.9.</strong> Creating modules</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.10.</strong> Routing support</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.11.</strong> Generating standalone scripts</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.2.</strong> Components</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.3.</strong> Creating a simple component</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.4.</strong> Generating components with Angular CLI</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.5.</strong> Component metadata</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.6.</strong> Templates</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.7.</strong> Styles</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.8.</strong> Output events</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.9.</strong> Providers</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.10.</strong> Host</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.11.</strong> Queries</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.12.</strong> Content Projection</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.</strong> Dependency Injection</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.1.</strong> Preparing a project</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.2.</strong> Services</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.3.</strong> Providers</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.4.</strong> Injecting multiple instances</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.5.</strong> Optional dependencies</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.6.</strong> Manual injection with ReflectiveInjector</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.13.7.</strong> Summary</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.14.</strong> Events</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.14.1.</strong> Component events</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.14.2.</strong> DOM events</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.14.3.</strong> Service events</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.15.</strong> Directives</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.15.1.</strong> Introduction to Directives</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.15.2.</strong> Attribute Directives</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.15.3.</strong> Structural Directives</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.15.4.</strong> Modifying host element layout</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.16.</strong> Walkthrough: Upload Directive</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.</strong> Pipes</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.1.</strong> Introduction to Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.2.</strong> Pipes with Parameters</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.3.</strong> Chaining Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.4.</strong> Built-in Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.5.</strong> Custom Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.17.6.</strong> Pure And Impure Pipes</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.18.</strong> Global Application Configuration</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.18.1.</strong> Preparing the configuration file</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.18.2.</strong> Creating the configuration service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.18.3.</strong> Loading server-side configuration file</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.18.4.</strong> Registering configuration service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.18.5.</strong> Using configuration settings</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.19.</strong> Internationalisation (i18n)</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.19.1.</strong> Creating Translate Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.19.2.</strong> Creating Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.19.3.</strong> Using Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.19.4.</strong> Switching languages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.19.5.</strong> Summary</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Reusable Component Libraries</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.1.</strong> Creating new application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> Creating component libraries</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> Building the packages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> Publishing to NPM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Advanced Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Dynamic Content in Angular</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Using with Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Additional Resources</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> Preparing new project</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.3.</strong> Creating Dockerfile</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.4.</strong> Testing in a container</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.5.</strong> Creating docker-compose.yml</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.6.</strong> Consuming from Docker Hub</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.7.</strong> Automating with Travis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.8.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Webpack</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Initial project structure</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Typescript configuration</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Basic webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> Advanced webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.5.</strong> Unit testing</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Building a Mobile App with Cordova and Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> Installing command-line tools</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> Generating a new Angular App</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> Routing support</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.4.</strong> Summary</div></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Angular Book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/DenysVuika/angular-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="decorators"><a class="header" href="#decorators">Decorators</a></h2>
+<p>TypeScript introduces <code>decorators</code> feature, metadata expressions similar to Java annotation tags or C# and Swift attributes.
+ECMAScript does not yet have native support for annotating classes and class members (the feature is in the <code>proposal</code> state),
+so <code>decorators</code> is an experimental TypeScript feature.</p>
+<p>Decorators have a traditional notation of <code>@expression</code> where <code>expression</code> is the name of the function that should be invoked at runtime.</p>
+<p>This function receives <code>decorated</code> target as a parameter and can be attached to:</p>
+<ul>
+<li>class declaration</li>
+<li>method</li>
+<li>accessor</li>
+<li>property</li>
+<li>parameter</li>
+</ul>
+<h3 id="class-decorators"><a class="header" href="#class-decorators">Class Decorators</a></h3>
+<p>Class decorators are attached to class declarations.
+At runtime, the function that backs the decorator gets applied to the class constructor.
+That allows decorators inspecting, modifying or even replacing class instances if needed.</p>
+<p>Here's a simple example of the <code>LogClass</code> decorator that outputs some log information every time being invoked:</p>
+<pre><code class="language-ts">function LogClass(constructor: Function) {
+    console.log('LogClass decorator executed for the constructor:');
+    console.log(constructor);
+}
+</code></pre>
+<p>Now you can use newly created decorator with different classes:</p>
+<pre><code class="language-ts">@LogClass
+class TextWidget {
+    text: string;
+
+    constructor(text: string = 'default text') {
+        this.text = text;
+    }
+
+    render() {
+        console.log(`Rendering text: ${this.text}`);
+    }
+}
+</code></pre>
+<p>When a new instance of <code>TextWidget</code> class is created, the <code>@LogClass</code> attribute will be automatically invoked:</p>
+<pre><code class="language-ts">let widget = new TextWidget();
+widget.render();
+</code></pre>
+<p>The class decorator should produce the following output:</p>
+<pre><code class="language-text">LogClass decorator executed for the constructor:
+[Function: TextWidget]
+Rendering text: default text
+</code></pre>
+<h4 id="decorators-with-parameters"><a class="header" href="#decorators-with-parameters">Decorators with parameters</a></h4>
+<p>It is also possible passing values to decorators. You can achieve this with a feature known as <code>decorator factories</code>.
+A <em>decorator factory</em> is a function returning an expression that is called at runtime:</p>
+<p>Let's create another simple decorator with log output that accepts additional <code>prefix</code> and <code>suffix</code> settings:</p>
+<pre><code class="language-ts">function LogClassWithParams(prefix: string, suffix: string) {
+    return (constructor: Function) =&gt; {
+        console.log(`
+            ${prefix} 
+            LogClassWithParams decorator called for: 
+            ${constructor} 
+            ${suffix}
+        `);
+    };
+}
+</code></pre>
+<p>It can now be tested with the <code>TextWidget</code> class created earlier:</p>
+<pre><code class="language-ts">@LogClassWithParams('BEGIN:', ':END')
+class TextWidget {
+    text: string;
+
+    constructor(text: string = 'default text') {
+        this.text = text;
+    }
+
+    render() {
+        console.log(`Rendering text: ${this.text}`);
+    }
+}
+
+let widget = new TextWidget();
+widget.render();
+</code></pre>
+<p>You have marked <code>TextWidget</code> class with the <code>LogClassWithParams</code> decorator having a <code>prefix</code> and <code>suffix</code> properties
+set to <code>BEGIN:</code> and <code>:END</code> values. The console output, in this case, should be:</p>
+<pre><code class="language-text">BEGIN:
+LogClassWithParams decorator called for: 
+function TextWidget(text) {
+    if (text === void 0) { text = 'default text'; }
+        this.text = text;
+    }
+}
+:END
+</code></pre>
+<h4 id="multiple-decorators"><a class="header" href="#multiple-decorators">Multiple decorators</a></h4>
+<p>You are not limited to a single decorator per class.
+TypeScript allows declaring as much class and member decorators as needed:</p>
+<pre><code class="language-ts">@LogClass
+@LogClassWithParams('BEGIN:', ':END')
+@LogClassWithParams('[', ']')
+class TextWidget {
+    // ...
+}
+</code></pre>
+<p>Note that decorators are called from right to left, or in this case from bottom to top.
+It means that first decorator that gets executed is:</p>
+<pre><code class="language-ts">@LogClassWithParams('[', ']')
+</code></pre>
+<p>and the last decorator is going to be</p>
+<pre><code class="language-ts">@LogClass
+</code></pre>
+<h3 id="method-decorators"><a class="header" href="#method-decorators">Method Decorators</a></h3>
+<p>Method decorators are attached to class methods and can be used to inspect, modify or completely replace method definition of the class.
+At runtime, these decorators receive following values as parameters: target instance, member name and member descriptor.</p>
+<p>Let's create a decorator to inspect those parameters:</p>
+<pre><code class="language-ts">function LogMethod(target: any, 
+                   propertyKey: string, 
+                   descriptor: PropertyDescriptor) {
+    console.log(target);
+    console.log(propertyKey);
+    console.log(descriptor);
+}
+</code></pre>
+<p>Below is an example of this decorator applied to a <code>render</code> method of <code>TextWidget</code> class:</p>
+<pre><code class="language-ts">class TextWidget {
+    text: string;
+
+    constructor(text: string = 'default text') {
+        this.text = text;
+    }
+
+    @LogMethod
+    render() {
+        console.log(`Rendering text: ${this.text}`);
+    }
+}
+
+let widget = new TextWidget();
+widget.render();
+</code></pre>
+<p>The console output in this case will be as following:</p>
+<pre><code class="language-text">TextWidget { render: [Function] }
+render
+{ value: [Function],
+  writable: true,
+  enumerable: true,
+  configurable: true }
+Rendering text: default text
+</code></pre>
+<p>You can use <code>decorator factories</code> also with method decorators to support additional parameters.</p>
+<pre><code class="language-ts">function LogMethodWithParams(message: string) {
+    return (target: any, 
+            propertyKey: string, 
+            descriptor: PropertyDescriptor) =&gt; {
+        console.log(`${propertyKey}: ${message}`);
+    };
+}
+</code></pre>
+<p>This decorator can now be applied to methods. You can attach multiple decorators to a single method:</p>
+<pre><code class="language-ts">class TextWidget {
+    text: string;
+
+    constructor(text: string = 'default text') {
+        this.text = text;
+    }
+
+    @LogMethodWithParams('hello')
+    @LogMethodWithParams('world')
+    render() {
+        console.log(`Rendering text: ${this.text}`);
+    }
+}
+
+let widget = new TextWidget();
+widget.render();
+</code></pre>
+<p>Note that decorators are called from right to left, or in this case from bottom to top.
+If you run the code the output should be as follows:</p>
+<pre><code class="language-text">render: world
+render: hello
+Rendering text: default text
+</code></pre>
+<h3 id="accessor-decorators"><a class="header" href="#accessor-decorators">Accessor Decorators</a></h3>
+<p>Accessor decorators are attached to property <code>getters</code> or <code>setters</code> and can be used to inspect, modify or completely replace accessor definition of the property.
+At runtime, these decorators receive following values as parameters: target instance, member name and member descriptor.</p>
+<p>Note that you can attach accessor decorator to either <code>getter</code> or <code>setter</code> but not both.
+This restriction exists because on the low level decorators deal with
+<a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Property Descriptors</a>
+that contain both <code>get</code> and <code>set</code> accessors.</p>
+<p>Let's create a decorator to inspect parameters:</p>
+<pre><code class="language-ts">function LogAccessor(target: any, 
+                     propertyKey: string, 
+                     descriptor: PropertyDescriptor) {
+    console.log('LogAccessor decorator called');
+    console.log(target);
+    console.log(propertyKey);
+    console.log(descriptor);
+}
+</code></pre>
+<p>Now the decorator can be applied to the following <code>TextWidget</code> class:</p>
+<pre><code class="language-ts">class TextWidget {
+    private _text: string;
+
+    @LogAccessor
+    get text(): string {
+        return this._text;
+    }
+
+    set text(value: string) {
+        this._text = value;
+    }
+
+    constructor(text: string = 'default text') {
+        this._text = text;
+    }
+}
+
+let widget = new TextWidget();
+</code></pre>
+<p>Once invoked the decorator should produce the following output:</p>
+<pre><code class="language-text">LogAccessor decorator called
+TextWidget { text: [Getter/Setter] }
+text
+{ get: [Function: get],
+  set: [Function: set],
+  enumerable: true,
+  configurable: true }
+</code></pre>
+<p>Same as with class and method decorators you can use decorator factories feature to pass parameters to your accessor decorator.</p>
+<pre><code class="language-ts">function LogAccessorWithParams(message: string) {
+    return (target: any, 
+            propertyKey: string, 
+            descriptor: PropertyDescriptor) =&gt; {
+        console.log(`Message from decorator: ${message}`);
+    }
+}
+</code></pre>
+<p>TypeScript allows using more than one decorator given you attach it to the same property accessor:</p>
+<pre><code class="language-ts">class TextWidget {
+    private _text: string;
+
+    @LogAccessorWithParams('hello')
+    @LogAccessorWithParams('world')
+    get text(): string {
+        return this._text;
+    }
+
+    set text(value: string) {
+        this._text = value;
+    }
+
+    constructor(text: string = 'default text') {
+        this._text = text;
+    }
+}
+
+let widget = new TextWidget();
+</code></pre>
+<p>The console output should be as shown below, note the right-to-left execution order:</p>
+<pre><code class="language-text">Message from decorator: world
+Message from decorator: hello
+</code></pre>
+<p>In case you declare decorator for both accessors TypeScript generates an error at compile time:</p>
+<pre><code class="language-ts">class TextWidget {
+    private _text: string;
+
+    @LogAccessorWithParams('hello')
+    get text(): string {
+        return this._text;
+    }
+    
+    @LogAccessorWithParams('world')
+    set text(value: string) {
+        this._text = value;
+    }
+}
+</code></pre>
+<pre><code class="language-text">error TS1207: Decorators cannot be applied to multiple get/set accessors of the same name.
+</code></pre>
+<h3 id="property-decorators"><a class="header" href="#property-decorators">Property Decorators</a></h3>
+<p>Property decorators are attached to class properties.
+At runtime, property decorator receives the following arguments:</p>
+<ul>
+<li>target object</li>
+<li>property name</li>
+</ul>
+<p>Due to technical limitations, it is not currently possible observing or modifying property initializers.
+That is why property decorators do not get Property Descriptor value at runtime
+and can be used mainly to observe a property with a particular name has been defined for a class.</p>
+<p>Here's a simple property decorator to display parameters it gets at runtime:</p>
+<pre><code class="language-ts">function LogProperty(target: any, propertyKey: string) {
+    console.log('LogProperty decorator called');
+    console.log(target);
+    console.log(propertyKey);
+}
+</code></pre>
+<pre><code class="language-ts">class TextWidget {
+
+    @LogProperty
+    id: string;
+
+    constructor(id: string) {
+        this.id = id;
+    }
+
+    render() {
+        // ...
+    }
+}
+
+let widget = new TextWidget('text1');
+</code></pre>
+<p>The output in this case should be as following:</p>
+<pre><code class="language-text">LogProperty decorator called
+TextWidget { render: [Function] }
+id
+</code></pre>
+<h3 id="parameter-decorators"><a class="header" href="#parameter-decorators">Parameter Decorators</a></h3>
+<p>Parameter decorators are attached to function parameters.
+At runtime, every parameter decorator function is called with the following arguments:</p>
+<ul>
+<li>target</li>
+<li>parameter name</li>
+<li>parameter position index</li>
+</ul>
+<p>Due to technical limitations, it is possible only detecting that a particular parameter has been declared on a function.</p>
+<p>Let's inspect runtime arguments with this simple parameter decorator:</p>
+<pre><code class="language-ts">function LogParameter(target: any, 
+                      parameterName: string, 
+                      parameterIndex: number) {
+    console.log('LogParameter decorator called');
+    console.log(target);
+    console.log(parameterName);
+    console.log(parameterIndex);
+}
+</code></pre>
+<p>You can now use this decorator with a class constructor and method parameters:</p>
+<pre><code class="language-ts">class TextWidget {
+
+    render(@LogParameter positionX: number, 
+           @LogParameter positionY: number) {
+        // ...
+    }
+
+}
+</code></pre>
+<p>Parameter decorators are also executed in right-to-left order.
+So you should see console outputs for <code>positionY</code> and then <code>positionX</code>:</p>
+<pre><code class="language-text">LogParameter decorator called
+TextWidget { render: [Function] }
+render
+1
+LogParameter decorator called
+TextWidget { render: [Function] }
+render
+0
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch03-07-modules.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="ch03-07-modules.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'G-23X2CQXZ48', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
