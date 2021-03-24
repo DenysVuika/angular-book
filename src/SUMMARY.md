@@ -26,6 +26,12 @@
 - [TypeScript](ch03-00-typescript.md)
   - [Getting Started](ch03-01-getting-started.md)
   - [TypeScript Features](ch03-02-features.md)
+    - [Types](ch03-03-types.md)
+    - [Classes](ch03-04-classes.md)
+    - [Interfaces](ch03-05-interfaces.md)
+    - [Abstract Classes](ch03-06-abstract-classes.md)
+    - [Modules](ch03-07-modules.md)
+    - [Decorators](ch03-08-decorators.md)
 
 ## Angular
 
