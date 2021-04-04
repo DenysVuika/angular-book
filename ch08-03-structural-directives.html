@@ -1,0 +1,686 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Structural Directives - Angular Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Angular Book</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-prerequisites.html"><strong aria-hidden="true">1.</strong> Prerequisites</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-node.html"><strong aria-hidden="true">1.1.</strong> Node</a></li><li class="chapter-item expanded "><a href="ch01-02-vscode.html"><strong aria-hidden="true">1.2.</strong> Visual Studio Code</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-es6.html"><strong aria-hidden="true">2.</strong> ES6</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-classes.html"><strong aria-hidden="true">2.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch02-02-inheritance.html"><strong aria-hidden="true">2.2.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="ch02-03-arrow-functions.html"><strong aria-hidden="true">2.3.</strong> Arrow Functions</a></li><li class="chapter-item expanded "><a href="ch02-04-template-literals.html"><strong aria-hidden="true">2.4.</strong> Template Literals</a></li><li class="chapter-item expanded "><a href="ch02-05-extended-parameters.html"><strong aria-hidden="true">2.5.</strong> Extended Parameter Handling</a></li><li class="chapter-item expanded "><a href="ch02-06-destructuring.html"><strong aria-hidden="true">2.6.</strong> Destructuring Assignment</a></li><li class="chapter-item expanded "><a href="ch02-07-modules.html"><strong aria-hidden="true">2.7.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch02-08-see-also.html"><strong aria-hidden="true">2.8.</strong> See Also</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-typescript.html"><strong aria-hidden="true">3.</strong> TypeScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-getting-started.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch03-02-features.html"><strong aria-hidden="true">3.2.</strong> TypeScript Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-03-types.html"><strong aria-hidden="true">3.2.1.</strong> Types</a></li><li class="chapter-item expanded "><a href="ch03-04-classes.html"><strong aria-hidden="true">3.2.2.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch03-05-interfaces.html"><strong aria-hidden="true">3.2.3.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="ch03-06-abstract-classes.html"><strong aria-hidden="true">3.2.4.</strong> Abstract Classes</a></li><li class="chapter-item expanded "><a href="ch03-07-modules.html"><strong aria-hidden="true">3.2.5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch03-08-decorators.html"><strong aria-hidden="true">3.2.6.</strong> Decorators</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="ch04-00-angular-cli.html"><strong aria-hidden="true">4.</strong> Angular CLI</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-installing.html"><strong aria-hidden="true">4.1.</strong> Installing</a></li><li class="chapter-item expanded "><a href="ch04-02-first-application.html"><strong aria-hidden="true">4.2.</strong> Your First Application</a></li><li class="chapter-item expanded "><a href="ch04-03-running-application.html"><strong aria-hidden="true">4.3.</strong> Running Application</a></li><li class="chapter-item expanded "><a href="ch04-04-linting.html"><strong aria-hidden="true">4.4.</strong> Code Linting</a></li><li class="chapter-item expanded "><a href="ch04-05-testing.html"><strong aria-hidden="true">4.5.</strong> Unit Tests</a></li><li class="chapter-item expanded "><a href="ch04-06-coverage.html"><strong aria-hidden="true">4.6.</strong> Code Coverage</a></li><li class="chapter-item expanded "><a href="ch04-07-development-and-production-builds.html"><strong aria-hidden="true">4.7.</strong> Development and Production Builds</a></li><li class="chapter-item expanded "><a href="ch04-08-using-blueprints.html"><strong aria-hidden="true">4.8.</strong> Using Blueprints</a></li><li class="chapter-item expanded "><a href="ch04-09-creating-modules.html"><strong aria-hidden="true">4.9.</strong> Creating Modules</a></li><li class="chapter-item expanded "><a href="ch04-10-routing-support.html"><strong aria-hidden="true">4.10.</strong> Routing Support</a></li><li class="chapter-item expanded "><a href="ch04-11-generating-standalone-scripts.html"><strong aria-hidden="true">4.11.</strong> Generating Standalone Scripts</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-angular.html"><strong aria-hidden="true">5.</strong> Angular</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-01-components.html"><strong aria-hidden="true">5.1.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-02-creating-a-simple-component.html"><strong aria-hidden="true">5.1.1.</strong> Creating a Simple Component</a></li><li class="chapter-item expanded "><a href="ch05-03-generating-components-with-angular-cli.html"><strong aria-hidden="true">5.1.2.</strong> Generating Components with Angular CLI</a></li><li class="chapter-item expanded "><a href="ch05-04-component-metadata.html"><strong aria-hidden="true">5.1.3.</strong> Component Metadata</a></li><li class="chapter-item expanded "><a href="ch05-05-templates.html"><strong aria-hidden="true">5.1.4.</strong> Templates</a></li><li class="chapter-item expanded "><a href="ch05-06-styles.html"><strong aria-hidden="true">5.1.5.</strong> Styles</a></li><li class="chapter-item expanded "><a href="ch05-07-input-properties.html"><strong aria-hidden="true">5.1.6.</strong> Input Properties</a></li><li class="chapter-item expanded "><a href="ch05-08-output-events.html"><strong aria-hidden="true">5.1.7.</strong> Output Events</a></li><li class="chapter-item expanded "><a href="ch05-09-providers.html"><strong aria-hidden="true">5.1.8.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch05-10-host.html"><strong aria-hidden="true">5.1.9.</strong> Host</a></li><li class="chapter-item expanded "><a href="ch05-11-queries.html"><strong aria-hidden="true">5.1.10.</strong> Queries</a></li><li class="chapter-item expanded "><a href="ch05-12-component-lifecycle.html"><strong aria-hidden="true">5.1.11.</strong> Component Lifecycle</a></li><li class="chapter-item expanded "><a href="ch05-13-content-projection.html"><strong aria-hidden="true">5.1.12.</strong> Content Projection</a></li></ol></li><li class="chapter-item expanded "><a href="ch06-00-dependency-injection.html"><strong aria-hidden="true">5.2.</strong> Dependency Injection</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch06-01-preparing-a-project.html"><strong aria-hidden="true">5.2.1.</strong> Preparing a Project</a></li><li class="chapter-item expanded "><a href="ch06-02-services.html"><strong aria-hidden="true">5.2.2.</strong> Services</a></li><li class="chapter-item expanded "><a href="ch06-03-providers.html"><strong aria-hidden="true">5.2.3.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch06-04-injection-tokens.html"><strong aria-hidden="true">5.2.4.</strong> Injection Tokens</a></li><li class="chapter-item expanded "><a href="ch06-05-injecting-multiple-instances.html"><strong aria-hidden="true">5.2.5.</strong> Injecting Multiple Instances</a></li><li class="chapter-item expanded "><a href="ch06-06-optional-dependencies.html"><strong aria-hidden="true">5.2.6.</strong> Optional Dependencies</a></li><li class="chapter-item expanded "><a href="ch06-07-manual-injection.html"><strong aria-hidden="true">5.2.7.</strong> Manual Injection</a></li><li class="chapter-item expanded "><a href="ch06-08-summary.html"><strong aria-hidden="true">5.2.8.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="ch07-00-events.html"><strong aria-hidden="true">5.3.</strong> Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch07-01-component-events.html"><strong aria-hidden="true">5.3.1.</strong> Component Events</a></li><li class="chapter-item expanded "><a href="ch07-02-dom-events.html"><strong aria-hidden="true">5.3.2.</strong> DOM Events</a></li><li class="chapter-item expanded "><a href="ch07-03-service-events.html"><strong aria-hidden="true">5.3.3.</strong> Service Events</a></li></ol></li><li class="chapter-item expanded "><a href="ch08-00-directives.html"><strong aria-hidden="true">5.4.</strong> Directives</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch08-01-introduction-to-directives.html"><strong aria-hidden="true">5.4.1.</strong> Introduction to Directives</a></li><li class="chapter-item expanded "><a href="ch08-02-attribute-directives.html"><strong aria-hidden="true">5.4.2.</strong> Attribute Directives</a></li><li class="chapter-item expanded "><a href="ch08-03-structural-directives.html" class="active"><strong aria-hidden="true">5.4.3.</strong> Structural Directives</a></li><li class="chapter-item expanded "><a href="ch08-04-modifying-host-layout.html"><strong aria-hidden="true">5.4.4.</strong> Modifying Host Element Layout</a></li><li class="chapter-item expanded "><a href="ch08-05-walkthrough-upload-directive.html"><strong aria-hidden="true">5.4.5.</strong> Walkthrough: Upload Directive</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Pipes</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.1.</strong> Introduction to Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.2.</strong> Pipes with Parameters</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.3.</strong> Chaining Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.4.</strong> Built-in Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.5.</strong> Custom Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.6.</strong> Pure And Impure Pipes</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> Global Application Configuration</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.1.</strong> Preparing the Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.2.</strong> Creating the Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.3.</strong> Loading Server-Side Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.4.</strong> Registering Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.5.</strong> Using Configuration Settings</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.</strong> Internationalisation (i18n)</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.1.</strong> Creating Translate Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.2.</strong> Creating Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.3.</strong> Using Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.4.</strong> Switching Languages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.5.</strong> Summary</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Reusable Component Libraries</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Creating new application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Creating component libraries</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Building the packages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Publishing to NPM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Advanced Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Dynamic Content in Angular</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Using with Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Additional Resources</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Preparing new project</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Creating Dockerfile</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> Testing in a container</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.5.</strong> Creating docker-compose.yml</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.6.</strong> Consuming from Docker Hub</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.7.</strong> Automating with Travis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.8.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Webpack</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> Initial project structure</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> Typescript configuration</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> Basic webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.4.</strong> Advanced webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.5.</strong> Unit testing</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Building a Mobile App with Cordova and Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Installing command-line tools</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Generating a new Angular App</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.3.</strong> Routing support</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.4.</strong> Summary</div></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Angular Book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/DenysVuika/angular-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="structural-directives"><a class="header" href="#structural-directives">Structural Directives</a></h2>
+<p>Structural directives allow you to control how element renders at run time.</p>
+<h3 id="built-in-structural-directives"><a class="header" href="#built-in-structural-directives">Built-in structural directives</a></h3>
+<p>Angular provides a few built-in directives you are going to use very often:</p>
+<ul>
+<li>NgIf</li>
+<li>NgFor</li>
+<li>NgSwitch</li>
+</ul>
+<h4 id="ngif"><a class="header" href="#ngif">NgIf</a></h4>
+<p>You are going to use <code>NgIf</code> directive when you want to display or hide decorated element based on condition.</p>
+<p>The most common usage format for this directive is</p>
+<pre><code class="language-html">&lt;element *ngIf=&quot;&lt;condition&gt;&quot;&gt;
+  &lt;!-- ... --&gt;
+&lt;/element&gt;
+</code></pre>
+<p>where <code>&lt;condition&gt;</code> is a valid JavaScript expression.</p>
+<p>Let's build an example demonstrating conditional inclusion of the template.
+Add a boolean property <code>extraContent</code> to your <code>AppComponent</code> component controller class implementation:</p>
+<pre><code class="language-ts">// src/app/app.component.ts
+
+export class AppComponent {
+  extraContent = false;
+}
+</code></pre>
+<p>Next, put a <code>&lt;button&gt;</code> element to the component template, this button should toggle the <code>extraContent</code> value on each click.</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;button (click)=&quot;extraContent = !extraContent&quot;&gt;
+  Toggle extra content
+&lt;/button&gt;
+</code></pre>
+<p>Finally, let's add some content that should be displayed only when <code>extraContent</code> property value gets set to <code>true</code></p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;div *ngIf=&quot;extraContent&quot;&gt;
+  &lt;h2&gt;Extra content comes here (ngIf)&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Now if you run the application you should be able to toggle additional content by clicking the button multiple times.</p>
+<p><img src="images/directives-ngif-01.png" alt="" /></p>
+<p>Very often you may need two different templates within the component based on the condition evaluation.
+Traditionally developers are using separate <code>NgIf</code> directives assigned to <code>truthy</code> and <code>falsy</code> results of the same expression:</p>
+<pre><code class="language-html">&lt;element *ngIf=&quot;condition&quot;&gt;main content&lt;/element&gt;
+&lt;element *ngIf=&quot;!condition&quot;&gt;alternative content&lt;/element&gt;
+</code></pre>
+<p>The NgIf directive also supports <code>else</code> blocks for showing alternative content when the condition expression evaluates to a falsy value.
+In this case, you need to provide a reference to a separate <code>ng-template</code>:</p>
+<pre><code class="language-html">&lt;element *ngIf=&quot;condition; else alternative&quot;&gt;
+  Main template (condition is truthy)
+&lt;/element&gt;
+
+&lt;ng-template #alternative&gt;
+  Alternative template (condition is falsy)
+&lt;/ng-template&gt;
+</code></pre>
+<p>To see that on practice return to the project created earlier and add the additional template:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;ng-template #emptyView&gt;
+  &lt;h3&gt;No extra content available&lt;/h3&gt;
+&lt;/ng-template&gt;
+</code></pre>
+<p>Template above can be referenced by <code>emptyView</code> id.
+Now update the main element to utilize the newly created template:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;div *ngIf=&quot;extraContent; else emptyView&quot;&gt;
+  &lt;h2&gt;Extra content comes here (ngIf)&lt;/h2&gt;
+&lt;/div&gt;
+</code></pre>
+<p>If you run the application right now and click the <code>Toggle extra content</code> button, you should see the content of the <code>emptyView</code> template.</p>
+<p><img src="images/directives-ngif-02.png" alt="" /></p>
+<p>It is possible to store both templates as external references.
+By default, Angular treats inline template as a <code>then</code> block, but you can define it explicitly using the following syntax:</p>
+<pre><code class="language-html">&lt;element *ngIf=&quot;condition; then thenBlock else elseBlock&quot;&gt;&lt;/element&gt;
+</code></pre>
+<p>Now if updated our example can look like the following:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;button (click)=&quot;extraContent = !extraContent&quot;&gt;
+  Toggle extra content
+&lt;/button&gt;
+&lt;div *ngIf=&quot;extraContent; then mainView else emptyView&quot;&gt;&lt;/div&gt;
+
+&lt;ng-template #mainView&gt;
+  &lt;h2&gt;Extra content comes here (ngIf)&lt;/h2&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #emptyView&gt;
+  &lt;h3&gt;No extra content available&lt;/h3&gt;
+&lt;/ng-template&gt;
+</code></pre>
+<blockquote>
+<p><strong>Source Code</strong></p>
+<p>You can find the source code in the <strong><a href="https://github.com/DenysVuika/developing-with-angular/tree/master/angular/directives/structural-directives">angular/directives/structural-directives</a></strong> folder.</p>
+</blockquote>
+<h4 id="ngfor"><a class="header" href="#ngfor">NgFor</a></h4>
+<p>The main purpose of <code>NgFor</code> directive is to display iterable collections by utilizing a custom HTML template for each entry.</p>
+<h5 id="binding-to-arrays"><a class="header" href="#binding-to-arrays">Binding to arrays</a></h5>
+<p>Let's start with a simple example that best demonstrates <code>NgFor</code> directive in action.</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;ul&gt;
+    &lt;li *ngFor=&quot;let num of [1,2,3,4,5]&quot;&gt;
+        &lt;span&gt;{{num}}&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>In the example above we are using <code>NgFor</code> directive with a collection of five numbers to render an unordered (bulleted) list.
+Angular treats the content of the list item as a template and repeatedly applies to each array entry.</p>
+<p>You should see the following HTML once application compiles and restarts:</p>
+<p><img src="images/directives-ngfor-01.png" alt="" /></p>
+<p>If you inspect the source code of the page you should see the structure similar to the one below:</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;
+        &lt;span&gt;1&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;2&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;3&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;4&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span&gt;5&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h5 id="binding-to-class-properties-or-functions"><a class="header" href="#binding-to-class-properties-or-functions">Binding to class properties or functions</a></h5>
+<p>It is also possible to bind <code>NgFor</code> to class properties or functions.</p>
+<pre><code class="language-ts">// src/app/app.component.ts
+
+export class AppComponent {
+    // ...
+
+    users = [
+        {
+            id: 10,
+            firstName: 'John',
+            lastName: 'Doe'
+        },
+        {
+            id: 20,
+            firstName: 'Joan',
+            lastName: 'Doe'
+        }
+    ];
+}
+</code></pre>
+<p>We are going to have two objects in the <code>users</code> collection.
+The list entry template should now look like the next one:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;ul&gt;
+    &lt;li *ngFor=&quot;let user of users&quot;&gt;
+        &lt;div&gt;{{user.firstName + ' ' + user.lastName}}&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Once your project and compiled and reloaded you should see a list of full user names:</p>
+<p><img src="images/directives-ngfor-02.png" alt="" /></p>
+<h5 id="using-exported-variables"><a class="header" href="#using-exported-variables">Using exported variables</a></h5>
+<p>The <code>NgFor</code>directives exports several values that you can map to the the local template variables:</p>
+<ul>
+<li><code>index: number</code> holds the numeric position of the current array item</li>
+<li><code>first: boolean</code> indicates whether the current array item is the first one</li>
+<li><code>last: boolean</code> indicates whether the current array item is the last one</li>
+<li><code>even: boolean</code> indicates whether current array item's position index is even</li>
+<li><code>odd: boolean</code> indicates whether current array item's position index is odd</li>
+</ul>
+<p>You can use these additional values to improve the user interface.
+For example, let's add row numbers to the user list:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;ul&gt;
+    &lt;li *ngFor=&quot;let user of users; let i = index&quot;&gt;
+        &lt;div&gt;
+            &lt;span&gt;{{i + 1}}: &lt;/span&gt;
+            &lt;span&gt;{{user.firstName + ' ' + user.lastName}}&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Note the use of <code>let i = index</code>, this is where you bind <code>index</code> property to a local template variable <code>i</code>.
+That allows you displaying it via <code>&lt;span&gt;{{i + 1}}: &lt;/span&gt;</code></p>
+<p><img src="images/directives-ngfor-03.png" alt="" /></p>
+<p>You can use all local variables for conditional styling and layout.
+For example, you may want drawing a table or a list with stripes based on <code>even</code> and <code>odd</code> value,
+rendering some header or footer for the <code>first</code> and <code>last</code> items.</p>
+<p>It is possible to use all variables at the same time separating them by semicolons:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;ul&gt;
+    &lt;li *ngFor=&quot;let user of users; let isFirst = first; let isLast = last;&quot;&gt;
+        &lt;span&gt;{{user.firstName + ' ' + user.lastName}}&lt;/span&gt;
+        &lt;span *ngIf=&quot;isFirst&quot;&gt;(this is the first item)&lt;/span&gt;
+        &lt;span *ngIf=&quot;isLast&quot;&gt;(this is the last item)&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>When running the application, you should notice that first and last items in the list get different text appended to them based on the condition expression.</p>
+<p><img src="images/directives-ngfor-04.png" alt="" /></p>
+<h5 id="improving-performance-with-trackby"><a class="header" href="#improving-performance-with-trackby">Improving performance with <code>trackBy</code></a></h5>
+<p>Every time a collection changes Angular drops existing DOM elements and the renders entire set of new ones.
+That is fine when you are dealing with static collections.
+However, you may see significant performance drops when using frequently changed arrays,
+for example when using dynamic editing or populating collections from the server.
+The complexity of item templates can also slow down rendering and affect overall application performance.</p>
+<p>Angular provides a special <code>trackBy</code> feature that allows you to track underlying objects by unique <code>id</code> values
+and to rebuild DOM elements only for the entries that change.
+For many scenarios that often ends up with a huge performance boosts as large portions of the DOM remain unchanged.</p>
+<p>The <code>trackBy</code> value should go after the main <code>ngFor</code> expression and must be separated by a semicolon:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;ul&gt;
+    &lt;li *ngFor=&quot;let user of users; trackBy: trackByUserId&quot;&gt;
+        &lt;span&gt;{{user.firstName + ' ' + user.lastName}}&lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>The <code>trackBy</code> always binds to a component method having a numeric <code>index</code> and a current collection object as parameters:</p>
+<pre><code class="language-ts">// src/app/app.component.ts
+
+trackByUserId(index: number, user: any) {
+  return user.id;
+}
+</code></pre>
+<p>In the example above we tell Angular to keep track of users in the list based on the <code>id</code> property value
+so that it can better detect what item has been added or removed.</p>
+<h4 id="ngswitch"><a class="header" href="#ngswitch">NgSwitch</a></h4>
+<p>The <code>NgSwitch</code> directive is used for conditional rendering of element templates depending on the expression value.
+You can treat it as an advanced <code>NgIf</code> directive with multiple <code>else</code> clauses.</p>
+<p>You need three separate directives to make <code>NgSwitch</code> work:</p>
+<ul>
+<li><code>NgSwitch</code>: an attribute directive holding main expression body</li>
+<li><code>NgSwitchCase</code>: a structural directive, renders corresponding template if its condition matches that of the <code>NgSwitch</code> one</li>
+<li><code>NgSwitchDefault</code>: a structural directive, works like a fallback mechanism and renders a template if none of the <code>NgSwitchCase</code> values matches the <code>NgSwitch</code> one</li>
+</ul>
+<p>Here's the basic example of the <code>NgSwitch</code> format:</p>
+<pre><code class="language-html">&lt;element [ngSwitch]=&quot;expression&quot;&gt;
+    &lt;element *ngSwitchCase=&quot;condition1&quot;&gt;...&lt;/element&gt;
+    &lt;element *ngSwitchCase=&quot;condition2&quot;&gt;...&lt;/element&gt;
+    &lt;element *ngSwitchDefault&gt;...&lt;/element&gt;
+&lt;/element&gt;
+</code></pre>
+<p>To check how <code>NgSwitch</code> operates in practice let's build a simple component that displays different UI layouts based on the selected role of the user.
+Open the <code>app.component.ts</code> and add the <code>roles</code> and <code>selectedRole</code> properties like below:</p>
+<pre><code class="language-ts">// src/app/app.component.ts
+
+roles = [
+    { id: 0, name: 'empty' },
+    { id: 1, name: 'unknown' },
+    { id: 2, name: 'user' },
+    { id: 3, name: 'guest' },
+    { id: 4, name: 'administrator' }
+];
+
+selectedRole = 'empty';
+</code></pre>
+<p>Next place a <code>&lt;select&gt;</code> element to be able to select a role from the dropdown list:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;select [(ngModel)]=&quot;selectedRole&quot;&gt;
+    &lt;option *ngFor=&quot;let role of roles&quot;&gt;{{role.name}}&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<p>Finally we are going to build our simple role template selector:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;div [ngSwitch]=&quot;selectedRole&quot;&gt;
+
+    &lt;div *ngSwitchCase=&quot;'administrator'&quot;&gt;
+        Special layout for the &lt;strong&gt;administrator&lt;/strong&gt; role
+    &lt;/div&gt;
+
+    &lt;div *ngSwitchCase=&quot;'guest'&quot;&gt;
+        Special layout for the &lt;strong&gt;guest&lt;/strong&gt; role
+    &lt;/div&gt;
+
+    &lt;div *ngSwitchDefault&gt;
+        General UI for the roles
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+<p>As a result, we are going to use dedicated UI templates for <code>administrator</code> and <code>guest</code> roles:</p>
+<p><img src="images/directives-ngswitch-01.png" alt="" /></p>
+<p>The rest of the roles should receive a generic template.</p>
+<p><img src="images/directives-ngswitch-02.png" alt="" /></p>
+<p>As you can see from the examples above, the <code>NgSwitch</code> directive is a powerful and flexible way for conditional element rendering in Angular.</p>
+<h3 id="creating-a-structural-directive"><a class="header" href="#creating-a-structural-directive">Creating a Structural Directive</a></h3>
+<p>Let's create a simple structural directive called <code>RepeatDirective</code> that is going to repeat specified HTML template certain number of times.
+You can use Angular CLI to generate a working directive skeleton quickly.</p>
+<pre><code class="language-sh">ng g directive repeat
+</code></pre>
+<p>The command above gives you a basic <code>RepeatDirective</code> implementation and a simple unit test.
+It also modifies the main application module <code>app.module.ts</code> to register new directive within module declarations.</p>
+<pre><code class="language-text">installing directive
+  create src/app/repeat.directive.spec.ts
+  create src/app/repeat.directive.ts
+  update src/app/app.module.ts
+</code></pre>
+<p>Here's the content of the <code>repeat.directive.ts</code> we are going to work with:</p>
+<pre><code class="language-ts">// src/app/repeat.directive.ts
+
+import { Directive } from '@angular/core';
+
+@Directive({
+  selector: '[appRepeat]'
+})
+export class RangeDirective {
+
+  constructor() { }
+
+}
+</code></pre>
+<p>Note that Angular CLI automatically prepends default <code>app</code> prefix to the directive selector value.
+This helps us to avoid name conflicts with the existing directives from either standard Angular or third party libraries.</p>
+<p>You can use your new directive with any HTML element like the following:</p>
+<pre><code class="language-html">&lt;element *appRepeat&gt;...&lt;/element&gt;
+</code></pre>
+<p>It is also possible to use the plain format without Angular syntactic sugar:</p>
+<pre><code class="language-html">&lt;ng-template [appRepeat]&gt;&lt;!--...--&gt;&lt;/ng-template&gt;
+</code></pre>
+<p>Now let's update our directive to repeat the content.</p>
+<pre><code class="language-ts">// src/app/repeat.directive.ts
+
+import { Directive, TemplateRef, ViewContainerRef, Input } from '@angular/core';
+
+@Directive({
+  selector: '[appRepeat]'
+})
+export class RepeatDirective {
+
+  constructor(private templateRef: TemplateRef&lt;any&gt;,
+              private viewContainer: ViewContainerRef) { }
+
+  @Input()
+  set appRepeat(times: number) {
+    for (let i = 0; i &lt; times; i++) {
+      this.viewContainer.createEmbeddedView(this.templateRef);
+    }
+  }
+
+}
+</code></pre>
+<p>First of all, you get access to the underlying template by injecting <code>TemplateRef</code> instance and using it as a local reference.
+You also save a reference to the <code>ViewContainerRef</code> instance as you need it to turn the template reference to a real HTML element.</p>
+<p>As a second step, we define an <code>appRepeat</code> setter that is going to receive configuration settings from the directive value.
+Note that to map an attribute value to a function parameter the directive setter must have the same name as the HTML selector value.
+In our case, it is <code>appRepeat</code> one. That gives you the possibility using the <code>*directive=&quot;expression&quot;</code> format similar to the one below:</p>
+<pre><code class="language-html">&lt;element *appRepeat=&quot;5&quot;&gt;...&lt;/element&gt;
+</code></pre>
+<p>The child content of the decorated element gets treated as a template. 
+With the help of <code>ViewContainer</code> and <code>Template</code> references we turn it into the HTML DOM multiple times:</p>
+<pre><code class="language-ts">for (let i = 0; i &lt; times; i++) {
+  this.viewContainer.createEmbeddedView(this.templateRef);
+}
+</code></pre>
+<p>You can test the directive with the following layout:</p>
+<pre><code class="language-html">&lt;div *appRepeat=&quot;5&quot;&gt;
+    &lt;div&gt;Hello&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>It is going to render the following output once the application runs:</p>
+<pre><code class="language-html">Hello
+Hello
+Hello
+Hello
+Hello
+</code></pre>
+<p>The <code>Hello</code> template is rendered 5 times as we expect it.
+However, rendering HTML elements without data context is not very useful.
+Let's extend our directive with a custom context set to the position index of the element:</p>
+<pre><code class="language-ts">for (let i = 0; i &lt; times; i++) {
+  this.viewContainer.createEmbeddedView(this.templateRef, {
+    $implicit: i
+  });
+}
+</code></pre>
+<p>Now you can define a local variable for your template bound to the data context:</p>
+<pre><code class="language-html">&lt;div *appRepeat=&quot;5; let idx&quot;&gt;
+  &lt;div&gt;Hello {{idx}}&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>You can also change example able to be like the next one:</p>
+<pre><code class="language-html">&lt;ng-template [appRepeat]=&quot;5&quot; let-idx&gt;
+  &lt;div&gt;Hello {{idx}}&lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+<p>This time the application output when using any of these formats is going to be as following:</p>
+<pre><code class="language-html">Hello 0
+Hello 1
+Hello 2
+Hello 3
+Hello 4
+</code></pre>
+<p>Let's get back to the data context again. Any local variable that has no value defined is going to point to the default <code>$implicit</code> value.
+You can define as many variables as needed within your directive implementation.
+For example, try to expose <code>first</code> and <code>last</code> variables similar to those of the <code>NgFor</code> directive:</p>
+<pre><code class="language-ts">for (let i = 0; i &lt; times; i++) {
+    this.viewContainer.createEmbeddedView(this.templateRef, {
+        $implicit: i,
+        first: i === 0,
+        last: i === times - 1
+    });
+}
+</code></pre>
+<p>Next you can wire newly created local variables and reuse them within the template:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;div *appRepeat=&quot;5; let idx; let isFirst = first; let isLast = last;&quot;&gt;
+    &lt;div&gt;
+      Hello {{idx}}
+      &lt;span *ngIf=&quot;isFirst&quot;&gt;(first)&lt;/span&gt;
+      &lt;span *ngIf=&quot;isLast&quot;&gt;(last)&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Once the application compiles and runs you should see the following result:</p>
+<pre><code class="language-html">Hello 0 (first)
+Hello 1
+Hello 2
+Hello 3
+Hello 4 (last)
+</code></pre>
+<p>You can keep enhancing your directive with more complex layout and behavior.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch08-02-attribute-directives.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="ch08-04-modifying-host-layout.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="ch08-02-attribute-directives.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="ch08-04-modifying-host-layout.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'G-23X2CQXZ48', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
