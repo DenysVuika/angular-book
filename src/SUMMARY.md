@@ -93,12 +93,12 @@
     - [Loading Server-Side Configuration File](ch10-03-loading-configuration-file.md)
     - [Registering Configuration Service](ch10-04-registering-configuration-service.md)
     - [Using Configuration Settings](ch10-05-using-configuration-settings.md)
-  - [Internationalisation (i18n)]()
-    - [Creating Translate Service]()
-    - [Creating Translate Pipe]()
-    - [Using Translate Pipe]()
-    - [Switching Languages]()
-    - [Summary]()
+  - [Internationalization (i18n)](ch11-00-i18n.md)
+    - [Creating Translate Service](ch11-01-creating-translate-service.md)
+    - [Creating Translate Pipe](ch11-02-creating-translate-pipe.md)
+    - [Using Translate Pipe](ch11-03-using-translate-pipe.md)
+    - [Switching Languages](ch11-04-switching-languages.md)
+    - [Summary](ch11-05-summary.md)
 
 ## Libraries
 
