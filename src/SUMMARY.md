@@ -102,12 +102,12 @@
 
 ## Libraries
 
-- [Reusable Component Libraries]()
-  - [Creating new application]()
-  - [Creating component libraries]()
-  - [Building the packages]()
-  - [Publishing to NPM]()
-  - [See also]()
+- [Reusable Component Libraries](ch12-00-reusable-component-libraries.md)
+  - [Creating New Application](ch12-01-creating-new-application.md)
+  - [Creating Component Libraries](ch12-02-creating-component-libraries.md)
+  - [Building the Packages](ch12-03-building-the-packages.md)
+  - [Publishing to NPM](ch12-04-publishing-to-npm.md)
+  - [See Also](ch12-05-see-also.md)
 
 ## Advanced Angular
 
