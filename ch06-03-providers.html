@@ -1,0 +1,618 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Providers - Angular Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Angular Book</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-prerequisites.html"><strong aria-hidden="true">1.</strong> Prerequisites</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-node.html"><strong aria-hidden="true">1.1.</strong> Node</a></li><li class="chapter-item expanded "><a href="ch01-02-vscode.html"><strong aria-hidden="true">1.2.</strong> Visual Studio Code</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-es6.html"><strong aria-hidden="true">2.</strong> ES6</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-classes.html"><strong aria-hidden="true">2.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch02-02-inheritance.html"><strong aria-hidden="true">2.2.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="ch02-03-arrow-functions.html"><strong aria-hidden="true">2.3.</strong> Arrow Functions</a></li><li class="chapter-item expanded "><a href="ch02-04-template-literals.html"><strong aria-hidden="true">2.4.</strong> Template Literals</a></li><li class="chapter-item expanded "><a href="ch02-05-extended-parameters.html"><strong aria-hidden="true">2.5.</strong> Extended Parameter Handling</a></li><li class="chapter-item expanded "><a href="ch02-06-destructuring.html"><strong aria-hidden="true">2.6.</strong> Destructuring Assignment</a></li><li class="chapter-item expanded "><a href="ch02-07-modules.html"><strong aria-hidden="true">2.7.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch02-08-see-also.html"><strong aria-hidden="true">2.8.</strong> See Also</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-typescript.html"><strong aria-hidden="true">3.</strong> TypeScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-getting-started.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch03-02-features.html"><strong aria-hidden="true">3.2.</strong> TypeScript Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-03-types.html"><strong aria-hidden="true">3.2.1.</strong> Types</a></li><li class="chapter-item expanded "><a href="ch03-04-classes.html"><strong aria-hidden="true">3.2.2.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch03-05-interfaces.html"><strong aria-hidden="true">3.2.3.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="ch03-06-abstract-classes.html"><strong aria-hidden="true">3.2.4.</strong> Abstract Classes</a></li><li class="chapter-item expanded "><a href="ch03-07-modules.html"><strong aria-hidden="true">3.2.5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch03-08-decorators.html"><strong aria-hidden="true">3.2.6.</strong> Decorators</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="ch04-00-angular-cli.html"><strong aria-hidden="true">4.</strong> Angular CLI</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-installing.html"><strong aria-hidden="true">4.1.</strong> Installing</a></li><li class="chapter-item expanded "><a href="ch04-02-first-application.html"><strong aria-hidden="true">4.2.</strong> Your First Application</a></li><li class="chapter-item expanded "><a href="ch04-03-running-application.html"><strong aria-hidden="true">4.3.</strong> Running Application</a></li><li class="chapter-item expanded "><a href="ch04-04-linting.html"><strong aria-hidden="true">4.4.</strong> Code Linting</a></li><li class="chapter-item expanded "><a href="ch04-05-testing.html"><strong aria-hidden="true">4.5.</strong> Unit Tests</a></li><li class="chapter-item expanded "><a href="ch04-06-coverage.html"><strong aria-hidden="true">4.6.</strong> Code Coverage</a></li><li class="chapter-item expanded "><a href="ch04-07-development-and-production-builds.html"><strong aria-hidden="true">4.7.</strong> Development and Production Builds</a></li><li class="chapter-item expanded "><a href="ch04-08-using-blueprints.html"><strong aria-hidden="true">4.8.</strong> Using Blueprints</a></li><li class="chapter-item expanded "><a href="ch04-09-creating-modules.html"><strong aria-hidden="true">4.9.</strong> Creating Modules</a></li><li class="chapter-item expanded "><a href="ch04-10-routing-support.html"><strong aria-hidden="true">4.10.</strong> Routing Support</a></li><li class="chapter-item expanded "><a href="ch04-11-generating-standalone-scripts.html"><strong aria-hidden="true">4.11.</strong> Generating Standalone Scripts</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-angular.html"><strong aria-hidden="true">5.</strong> Angular</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-01-components.html"><strong aria-hidden="true">5.1.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-02-creating-a-simple-component.html"><strong aria-hidden="true">5.1.1.</strong> Creating a Simple Component</a></li><li class="chapter-item expanded "><a href="ch05-03-generating-components-with-angular-cli.html"><strong aria-hidden="true">5.1.2.</strong> Generating Components with Angular CLI</a></li><li class="chapter-item expanded "><a href="ch05-04-component-metadata.html"><strong aria-hidden="true">5.1.3.</strong> Component Metadata</a></li><li class="chapter-item expanded "><a href="ch05-05-templates.html"><strong aria-hidden="true">5.1.4.</strong> Templates</a></li><li class="chapter-item expanded "><a href="ch05-06-styles.html"><strong aria-hidden="true">5.1.5.</strong> Styles</a></li><li class="chapter-item expanded "><a href="ch05-07-input-properties.html"><strong aria-hidden="true">5.1.6.</strong> Input Properties</a></li><li class="chapter-item expanded "><a href="ch05-08-output-events.html"><strong aria-hidden="true">5.1.7.</strong> Output Events</a></li><li class="chapter-item expanded "><a href="ch05-09-providers.html"><strong aria-hidden="true">5.1.8.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch05-10-host.html"><strong aria-hidden="true">5.1.9.</strong> Host</a></li><li class="chapter-item expanded "><a href="ch05-11-queries.html"><strong aria-hidden="true">5.1.10.</strong> Queries</a></li><li class="chapter-item expanded "><a href="ch05-12-component-lifecycle.html"><strong aria-hidden="true">5.1.11.</strong> Component Lifecycle</a></li><li class="chapter-item expanded "><a href="ch05-13-content-projection.html"><strong aria-hidden="true">5.1.12.</strong> Content Projection</a></li></ol></li><li class="chapter-item expanded "><a href="ch06-00-dependency-injection.html"><strong aria-hidden="true">5.2.</strong> Dependency Injection</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch06-01-preparing-a-project.html"><strong aria-hidden="true">5.2.1.</strong> Preparing a Project</a></li><li class="chapter-item expanded "><a href="ch06-02-services.html"><strong aria-hidden="true">5.2.2.</strong> Services</a></li><li class="chapter-item expanded "><a href="ch06-03-providers.html" class="active"><strong aria-hidden="true">5.2.3.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch06-04-injection-tokens.html"><strong aria-hidden="true">5.2.4.</strong> Injection Tokens</a></li><li class="chapter-item expanded "><a href="ch06-05-injecting-multiple-instances.html"><strong aria-hidden="true">5.2.5.</strong> Injecting Multiple Instances</a></li><li class="chapter-item expanded "><a href="ch06-06-optional-dependencies.html"><strong aria-hidden="true">5.2.6.</strong> Optional Dependencies</a></li><li class="chapter-item expanded "><a href="ch06-07-manual-injection.html"><strong aria-hidden="true">5.2.7.</strong> Manual Injection</a></li><li class="chapter-item expanded "><a href="ch06-08-summary.html"><strong aria-hidden="true">5.2.8.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.</strong> Events</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.1.</strong> Component Events</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.2.</strong> DOM Events</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.3.3.</strong> Service Events</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.</strong> Directives</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.1.</strong> Introduction to Directives</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.2.</strong> Attribute Directives</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.3.</strong> Structural Directives</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.4.4.</strong> Modifying Host Element Layout</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.5.</strong> Walkthrough: Upload Directive</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> Pipes</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.1.</strong> Introduction to Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.2.</strong> Pipes with Parameters</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.3.</strong> Chaining Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.4.</strong> Built-in Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.5.</strong> Custom Pipes</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.6.</strong> Pure And Impure Pipes</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.</strong> Global Application Configuration</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.1.</strong> Preparing the Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.2.</strong> Creating the Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.3.</strong> Loading Server-Side Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.4.</strong> Registering Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.5.</strong> Using Configuration Settings</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.</strong> Internationalisation (i18n)</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.1.</strong> Creating Translate Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.2.</strong> Creating Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.3.</strong> Using Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.4.</strong> Switching Languages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.8.5.</strong> Summary</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Reusable Component Libraries</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Creating new application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Creating component libraries</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Building the packages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Publishing to NPM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Advanced Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Dynamic Content in Angular</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Using with Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Additional Resources</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Preparing new project</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Creating Dockerfile</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> Testing in a container</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.5.</strong> Creating docker-compose.yml</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.6.</strong> Consuming from Docker Hub</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.7.</strong> Automating with Travis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.8.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Webpack</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> Initial project structure</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> Typescript configuration</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> Basic webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.4.</strong> Advanced webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.5.</strong> Unit testing</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Building a Mobile App with Cordova and Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Installing command-line tools</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Generating a new Angular App</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.3.</strong> Routing support</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.4.</strong> Summary</div></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Angular Book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/DenysVuika/angular-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="providers"><a class="header" href="#providers">Providers</a></h2>
+<p>In the previous examples, you should have noticed that to import and use a class decorated with <code>@Injectable</code>
+one needs to declare its Type in the <code>providers</code> array of the main application Module.</p>
+<p>That makes Angular &quot;know&quot; about the services when instantiating components for your web application.</p>
+<p>You can have numerous services that perform various sets of functionality, all registered within the root module:</p>
+<pre><code class="language-ts">@NgModule({
+  // ...,
+
+  providers: [
+    ...
+    LogService,
+    AuthenticationService,
+    AvatarService,
+    UserService,
+    ChatService
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>The concept of <code>providers</code> in Angular goes beyond the collection of classes, in fact,
+it supports several powerful ways to control how dependency injection behaves at runtime.</p>
+<p>Besides strings, the framework supports an object-based notation for defining providers.</p>
+<h3 id="using-a-class"><a class="header" href="#using-a-class">Using a Class</a></h3>
+<p>Earlier in this chapter, we have been using a string value to define a LogService dependency in the <code>providers</code> section.
+We can express the same value with the help of the following notation:</p>
+<pre><code class="language-ts">{ provide: &lt;key&gt;, useClass: &lt;class&gt; }
+</code></pre>
+<p>Let's take a look at the next example:</p>
+<pre><code class="language-ts">@NgModule({
+  // ...
+  
+  providers: [
+    { provide: LogService, useClass: LogService }
+  ],
+
+  //...
+})
+export class AppModule { }
+</code></pre>
+<p>We are using <code>LogService</code> both as a &quot;key&quot; for injection and as a &quot;value&quot; to build a new instance for injection.</p>
+<p>The main feature of this approach is that &quot;key&quot; and &quot;value&quot; can be different classes.
+That allows swapping the value of the service with a custom implementation if needed, or with a Mock object for an improved unit testing experience.</p>
+<p>Now, let's create a custom logger implementation <code>CustomLogService</code>:</p>
+<pre><code class="language-sh">ng g service services/custom-log
+</code></pre>
+<p>Next, implement the <code>info</code> method, but this time it should contain some different output for us to distinguish both implementations:</p>
+<pre><code class="language-ts">import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class CustomLogService {
+
+  constructor() { }
+
+  info(message: string) {
+    console.log(`[custom]: [info] ${message}`);
+  }
+
+}
+</code></pre>
+<p>Finally, you need to import this class into the main application module and declare as a new provider with the &quot;LogService&quot; key.
+Don't forget to comment out or remove the former logger declaration as in the example below:</p>
+<pre><code class="language-ts">import { LogService } from './services/log.service';
+import { CustomLogService } from './services/custom-log.service';
+
+@NgModule({
+  // ...,
+
+  providers: [
+    // LogService
+    { provide: LogService, useClass: CustomLogService }
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>The code above means that all the components that inject the <code>LogService</code> as part of the constructor parameters
+are going to receive the <code>CustomLogService</code> implementation at runtime.</p>
+<p>Essentially we are swapping the value of the logger, and no component is going to notice that.
+That is the behavior developers often use for unit testing purposes.</p>
+<p>If you now run the web application and navigate to browser console, you should see the following output:</p>
+<pre><code class="language-text">[custom]: [info] Component 1 created
+[custom]: [info] Component 2 created
+</code></pre>
+<p>Strings now contain &quot;[custom]: &quot; as a prefix, which proves the <code>Component1</code> and <code>Component2</code>
+are now dealing with the <code>CustomLogService</code> code that has been successfully injected using the <code>LogService</code> key.</p>
+<h3 id="using-a-class-factory"><a class="header" href="#using-a-class-factory">Using a Class Factory</a></h3>
+<p>Previously we have been relying on the Angular framework to create instances of the injectable entities.</p>
+<p>There is also a possibility to control how the class gets instantiated if you need more than just a default constructor calls.
+Angular provides support for &quot;class factories&quot; for that very purpose.</p>
+<p>You are going to use the following notation for class factories:</p>
+<pre><code class="language-ts">{ provide: &lt;key&gt;, useFactory: &lt;function&gt; }
+</code></pre>
+<p>Before we jump into configuration details, let's extend our newly introduced <code>CustomLogService</code> service with the custom &quot;prefix&quot; support.
+We are going to implement a special <code>setPrefix</code> method:</p>
+<pre><code class="language-ts">import { Injectable } from '@angular/core';
+
+@Injectable({ providedIn: 'root' })
+export class CustomLogService {
+
+  private prefix = '[custom]';
+
+  setPrefix(value: string) {
+    this.prefix = value;
+  }
+
+  info(message: string) {
+    console.log(`${this.prefix}: [info] ${message}`);
+  }
+
+}
+</code></pre>
+<p>As you can see from the code above the <code>info</code> method is going to use a custom prefix for all the messages.</p>
+<p>Next, create an exported function <code>customLogServiceFactory</code> that is going to control how the CustomLogService instance gets created.
+In our case we are going to provide a custom prefix like in the example below:</p>
+<pre><code class="language-ts">export function customLogServiceFactory() {
+  const service = new CustomLogService();
+  service.setPrefix('(factory demo)');
+  return service;
+}
+</code></pre>
+<p>As you can imagine, there could be more sophisticated configuration scenarios for all application building blocks,
+including services, components, directives and pipes.</p>
+<p>Finally, you can use the factory function for the <code>LogService</code>.
+In this case, we both replace the real instance with the <code>CustomLogService</code>, and pre-configure the latter with a custom prefix for info messages:</p>
+<pre><code class="language-ts">@NgModule({
+  // ...
+  
+  providers: [
+    { provide: LogService, useFactory: customLogServiceFactory }
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>This time, when the application runs, you should see the following output:</p>
+<pre><code class="language-text">(factory demo): [info] Component 1 created
+(factory demo): [info] Component 2 created
+</code></pre>
+<h4 id="class-factories-with-dependencies"><a class="header" href="#class-factories-with-dependencies">Class Factories With Dependencies</a></h4>
+<p>When you use the default provider registration for a service, directive or component,
+the Angular framework automatically manages and injects dependencies if needed.
+In the case of factories, you can use additional <code>deps</code> property to define dependencies
+and allow your factory function to access corresponding instances during execution.</p>
+<p>Let's imagine we need to manually bootstrap the <code>AuthenticationService</code>
+that depends on the <code>RoleService</code> and <code>LogService</code> instances.</p>
+<pre><code class="language-ts">@Injectable({ providedIn: 'root' })
+export class AuthenticationService {
+
+  constructor(private roles: RoleService,
+              private log: LogService) {
+  }
+  
+  // ...
+}
+</code></pre>
+<p>We should declare our factory-based provider the following way now:</p>
+<pre><code class="language-ts">@NgModule({
+  // ...,
+  
+  providers: [
+      {
+        provide: AuthenticationService,
+        useFactory: authServiceFactory,
+        deps: [ RoleService, LogService ]
+      }
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>With the code above we instruct Angular to resolve the <code>RoleService</code> and <code>LogService</code>
+and use with our custom factory function when the <code>AuthenticationService</code> singleton instance gets created for the first time.</p>
+<p>Finally, your factory implementation should look similar to the following one:</p>
+<pre><code class="language-ts">export function authServiceFactory(roles: RoleService, log: LogService) {
+  const service = new AuthenticationService(roles, log);
+  // do some additional service setup
+  return service;
+}
+</code></pre>
+<h3 id="using-inject-decorator"><a class="header" href="#using-inject-decorator">Using @Inject Decorator</a></h3>
+<p>Another important scenario you might be interested in is the <code>@Inject</code> decorator.</p>
+<p>The <code>@Inject</code> decorator instructs Angular that a given parameter must get injected at runtime.
+You can also use it to get references to &quot;injectables&quot; using string-based keys.</p>
+<p>To demonstrate <code>@Inject</code> decorator in practice let's create a <code>dateFactory</code> function to generate current date:</p>
+<pre><code class="language-ts">// src/app/app.module.ts
+
+export function dateFactory() {
+  return new Date();
+}
+</code></pre>
+<p>Now we define a custom provider with the key <code>DATE_NOW</code> that is going to use our new factory.</p>
+<pre><code class="language-ts">@NgModule({
+  // ...,
+
+  providers: [
+    { provide: 'DATE_NOW', useFactory: dateFactory }
+  ],
+
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>For the next step, you can import the <code>@Inject</code> decorator from the <code>angular/core</code> namespace
+and use it with the <code>Component1</code> we created earlier in this chapter:</p>
+<pre><code class="language-ts">import { /*...,*/ Inject } from '@angular/core';
+
+@Component({...})
+export class Component1Component {
+
+  constructor(logService: LogService, @Inject('DATE_NOW') now: Date) {
+    logService.info('Component 1 created');
+    logService.info(now.toString());
+  }
+
+}
+</code></pre>
+<p>There are two points of interest in the code above. First, we inject <code>LogService</code> instance
+as a <code>logService</code> parameter using its type definition: <code>logService: LogService</code>.
+Angular is smart enough to resolve the expected value based on the <code>providers</code> section in the Module, using <code>LogService</code> as the key.</p>
+<p>Second, we inject a date value into the <code>now</code> parameter.
+This time Angular may experience difficulties resolving the value based on the <code>Date</code> type,
+so we have to use the <code>@Inject</code> decorator to explicitly bind <code>now</code> parameter to the <code>DATE_NOW</code> value.</p>
+<p>The browser console output, in this case, should be as the following one:</p>
+<pre><code class="language-text">(factory demo): [info] Component 1 created
+(factory demo): [info] Sun Aug 06 2017 08:45:36 GMT+0100 (BST)
+(factory demo): [info] Component 2 created
+</code></pre>
+<p>Another important use case for the @Inject decorator is using custom types in TypeScript
+when the service has different implementation class associated with the provider key,
+like in our early examples with LogService and CustomLogService.</p>
+<p>Below is an alternative way you can use to import <code>CustomLogService</code> into the component and use all the API exposed:</p>
+<pre><code class="language-ts">@Component({/*...*/})
+export class Component1Component {
+
+  constructor(@Inject(LogService) logService: CustomLogService) {
+    logService.info('Component 1 created');
+  }
+
+}
+</code></pre>
+<p>In this case, you are getting access to real <code>CustomLogService</code> class that is injected by Angular for all the <code>LogService</code> keys.
+If your custom implementation has extra methods and properties, not provided by the <code>LogService</code> type, you can use them from within the component now.</p>
+<p>This mechanism is often used in unit testing when the Mock classes expose additional features to control the execution and behavior flow.</p>
+<h3 id="using-a-value"><a class="header" href="#using-a-value">Using a Value</a></h3>
+<p>Another scenario for registering providers in the Angular framework is providing instances directly, without custom or default factories.</p>
+<p>The format, in this case, should be as following:</p>
+<pre><code class="language-ts">{ provide: &lt;key&gt;, useValue: &lt;value&gt; }
+</code></pre>
+<p>There are two main scenarios of providing the values.</p>
+<p>The first scenario is pretty much similar to the factory functions you can create and initialize the service instance
+before other components and services use it.</p>
+<p>Below is the basic example of how you can instantiate and register custom logging service by value:</p>
+<pre><code class="language-ts">const logService = new CustomLogService();
+logService.setPrefix('(factory demo)');
+
+@NgModule({
+  // ...
+  
+  providers: [
+    { provide: LogService, useValue: logService }
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>The second scenario is related to configuration objects you can pass to initialize or setup other components and services.</p>
+<p>Let's now register a <code>logger.config</code> provider with a JSON object value:</p>
+<pre><code class="language-ts">@NgModule({
+  // ...,
+
+  providers: [
+    {
+      LogService,
+      {
+        provide: 'logger.config',
+        useValue: {
+          logLevel: 'info',
+          prefix: 'my-logger'
+        }
+      }
+    }
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>Now any component, service or directive can receive the configuration values by injecting it as <code>logger.config</code>.
+To enable static type checking you can create a TypeScript interface describing the settings object:</p>
+<pre><code class="language-ts">export interface LoggerConfig {
+  logLevel?: string;
+  prefix?: string;
+}
+</code></pre>
+<p>Finally, proceed to the <code>LogService</code> code and inject the JSON object
+using the <code>logger.config</code> token and <code>LoggerConfig</code> interface like in the following example:</p>
+<pre><code class="language-ts">@Injectable({ providedIn: 'root' })
+export class LogService {
+
+  constructor(@Inject('logger.config') config: LoggerConfig) {
+    console.log(config);
+  }
+
+  info(message: string) {
+    console.log(`[info] ${message}`);
+  }
+
+}
+</code></pre>
+<p>For the sake of simplicity we just log the settings content to the browser console.
+Feel free to extend the code with configuring the log service behavior based on the incoming setting values.</p>
+<p>If you run the web application right now and open the browser console you should see the next output:</p>
+<pre><code class="language-text">{
+  logLevel: 'info',
+  prefix: 'my-logger'
+}
+</code></pre>
+<p>Registering providers with exact values is a compelling feature when it comes to global configuration and setup.
+Especially if you are building redistributable components, directives or services that developers can configure from the application level.</p>
+<h3 id="using-an-alias"><a class="header" href="#using-an-alias">Using an Alias</a></h3>
+<p>The next feature we are going to see in action is &quot;provider alias&quot;.</p>
+<p>You are probably not going to use this feature frequently in applications,
+but it is worth taking a look at what it does if you plan to create and maintain redistributable component libraries.</p>
+<p>Let's imagine a scenario when you have created a shared component library with an <code>AuthenticationService</code> service
+that performs various login and logout operations that you and other developers
+can reuse across multiple applications and other component libraries.</p>
+<p>After some time you may find another service implementation with the same APIs,
+or let's assume you want to replace the service with a newer <code>SafeAuthenticationService</code> implementation.</p>
+<p>The main issue you are going to come across when replacing Types is related to breaking changes.
+The old service might be in use in a variety of modules and applications, many files import the Type,
+use in constructor parameters to inject it, and so on.</p>
+<p>For the scenario above is where &quot;alias&quot; support comes to the rescue.
+It helps you to smooth the transition period for old content and provide backwards compatibility with existing integrations.</p>
+<p>Let's now take a look at the next example:</p>
+<pre><code class="language-ts">@NgModule({
+  // ...
+  
+  providers: [
+    SafeAuthenticationService,
+    { provide: AuthenticationService, useExisting: SafeAuthenticationService }
+  ],
+  
+  // ...
+})
+export class AppModule { }
+</code></pre>
+<p>As you can see from the example above, we register a new <code>SafeAuthenticationService</code> service
+and then declare an <code>AuthenticationService</code> that points to the same <code>SafeAuthenticationService</code>.</p>
+<p>Now all the components that use <code>AuthenticationService</code> are going to receive the instance of the <code>SafeAuthenticationService</code> service automatically.
+All the newly introduced components can now reference new service without aliases.</p>
+<blockquote>
+<p><strong>Difference with the &quot;useClass&quot;</strong></p>
+<p>You may wonder what's the difference with the <code>useClass</code> provider registration compared to the <code>useExisting</code> one.</p>
+<p>When using <code>useClass</code>, you are going to end up with two different instances registered at the same time.
+That is usually not a desirable behavior as services may contain events for example, and various components may have issues finding the &quot;correct&quot; instance.</p>
+<p>The <code>useExisting</code> approach allows you to have only one singleton instance referenced by two or more injection tokens.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch06-02-services.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="ch06-04-injection-tokens.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="ch06-02-services.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="ch06-04-injection-tokens.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'G-23X2CQXZ48', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
