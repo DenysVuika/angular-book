@@ -1,0 +1,533 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pure And Impure Pipes - Angular Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Angular Book</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-prerequisites.html"><strong aria-hidden="true">1.</strong> Prerequisites</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-node.html"><strong aria-hidden="true">1.1.</strong> Node</a></li><li class="chapter-item expanded "><a href="ch01-02-vscode.html"><strong aria-hidden="true">1.2.</strong> Visual Studio Code</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-es6.html"><strong aria-hidden="true">2.</strong> ES6</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-classes.html"><strong aria-hidden="true">2.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch02-02-inheritance.html"><strong aria-hidden="true">2.2.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="ch02-03-arrow-functions.html"><strong aria-hidden="true">2.3.</strong> Arrow Functions</a></li><li class="chapter-item expanded "><a href="ch02-04-template-literals.html"><strong aria-hidden="true">2.4.</strong> Template Literals</a></li><li class="chapter-item expanded "><a href="ch02-05-extended-parameters.html"><strong aria-hidden="true">2.5.</strong> Extended Parameter Handling</a></li><li class="chapter-item expanded "><a href="ch02-06-destructuring.html"><strong aria-hidden="true">2.6.</strong> Destructuring Assignment</a></li><li class="chapter-item expanded "><a href="ch02-07-modules.html"><strong aria-hidden="true">2.7.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch02-08-see-also.html"><strong aria-hidden="true">2.8.</strong> See Also</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-typescript.html"><strong aria-hidden="true">3.</strong> TypeScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-getting-started.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch03-02-features.html"><strong aria-hidden="true">3.2.</strong> TypeScript Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-03-types.html"><strong aria-hidden="true">3.2.1.</strong> Types</a></li><li class="chapter-item expanded "><a href="ch03-04-classes.html"><strong aria-hidden="true">3.2.2.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch03-05-interfaces.html"><strong aria-hidden="true">3.2.3.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="ch03-06-abstract-classes.html"><strong aria-hidden="true">3.2.4.</strong> Abstract Classes</a></li><li class="chapter-item expanded "><a href="ch03-07-modules.html"><strong aria-hidden="true">3.2.5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch03-08-decorators.html"><strong aria-hidden="true">3.2.6.</strong> Decorators</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="ch04-00-angular-cli.html"><strong aria-hidden="true">4.</strong> Angular CLI</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-installing.html"><strong aria-hidden="true">4.1.</strong> Installing</a></li><li class="chapter-item expanded "><a href="ch04-02-first-application.html"><strong aria-hidden="true">4.2.</strong> Your First Application</a></li><li class="chapter-item expanded "><a href="ch04-03-running-application.html"><strong aria-hidden="true">4.3.</strong> Running Application</a></li><li class="chapter-item expanded "><a href="ch04-04-linting.html"><strong aria-hidden="true">4.4.</strong> Code Linting</a></li><li class="chapter-item expanded "><a href="ch04-05-testing.html"><strong aria-hidden="true">4.5.</strong> Unit Tests</a></li><li class="chapter-item expanded "><a href="ch04-06-coverage.html"><strong aria-hidden="true">4.6.</strong> Code Coverage</a></li><li class="chapter-item expanded "><a href="ch04-07-development-and-production-builds.html"><strong aria-hidden="true">4.7.</strong> Development and Production Builds</a></li><li class="chapter-item expanded "><a href="ch04-08-using-blueprints.html"><strong aria-hidden="true">4.8.</strong> Using Blueprints</a></li><li class="chapter-item expanded "><a href="ch04-09-creating-modules.html"><strong aria-hidden="true">4.9.</strong> Creating Modules</a></li><li class="chapter-item expanded "><a href="ch04-10-routing-support.html"><strong aria-hidden="true">4.10.</strong> Routing Support</a></li><li class="chapter-item expanded "><a href="ch04-11-generating-standalone-scripts.html"><strong aria-hidden="true">4.11.</strong> Generating Standalone Scripts</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-angular.html"><strong aria-hidden="true">5.</strong> Angular</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-01-components.html"><strong aria-hidden="true">5.1.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-02-creating-a-simple-component.html"><strong aria-hidden="true">5.1.1.</strong> Creating a Simple Component</a></li><li class="chapter-item expanded "><a href="ch05-03-generating-components-with-angular-cli.html"><strong aria-hidden="true">5.1.2.</strong> Generating Components with Angular CLI</a></li><li class="chapter-item expanded "><a href="ch05-04-component-metadata.html"><strong aria-hidden="true">5.1.3.</strong> Component Metadata</a></li><li class="chapter-item expanded "><a href="ch05-05-templates.html"><strong aria-hidden="true">5.1.4.</strong> Templates</a></li><li class="chapter-item expanded "><a href="ch05-06-styles.html"><strong aria-hidden="true">5.1.5.</strong> Styles</a></li><li class="chapter-item expanded "><a href="ch05-07-input-properties.html"><strong aria-hidden="true">5.1.6.</strong> Input Properties</a></li><li class="chapter-item expanded "><a href="ch05-08-output-events.html"><strong aria-hidden="true">5.1.7.</strong> Output Events</a></li><li class="chapter-item expanded "><a href="ch05-09-providers.html"><strong aria-hidden="true">5.1.8.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch05-10-host.html"><strong aria-hidden="true">5.1.9.</strong> Host</a></li><li class="chapter-item expanded "><a href="ch05-11-queries.html"><strong aria-hidden="true">5.1.10.</strong> Queries</a></li><li class="chapter-item expanded "><a href="ch05-12-component-lifecycle.html"><strong aria-hidden="true">5.1.11.</strong> Component Lifecycle</a></li><li class="chapter-item expanded "><a href="ch05-13-content-projection.html"><strong aria-hidden="true">5.1.12.</strong> Content Projection</a></li></ol></li><li class="chapter-item expanded "><a href="ch06-00-dependency-injection.html"><strong aria-hidden="true">5.2.</strong> Dependency Injection</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch06-01-preparing-a-project.html"><strong aria-hidden="true">5.2.1.</strong> Preparing a Project</a></li><li class="chapter-item expanded "><a href="ch06-02-services.html"><strong aria-hidden="true">5.2.2.</strong> Services</a></li><li class="chapter-item expanded "><a href="ch06-03-providers.html"><strong aria-hidden="true">5.2.3.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch06-04-injection-tokens.html"><strong aria-hidden="true">5.2.4.</strong> Injection Tokens</a></li><li class="chapter-item expanded "><a href="ch06-05-injecting-multiple-instances.html"><strong aria-hidden="true">5.2.5.</strong> Injecting Multiple Instances</a></li><li class="chapter-item expanded "><a href="ch06-06-optional-dependencies.html"><strong aria-hidden="true">5.2.6.</strong> Optional Dependencies</a></li><li class="chapter-item expanded "><a href="ch06-07-manual-injection.html"><strong aria-hidden="true">5.2.7.</strong> Manual Injection</a></li><li class="chapter-item expanded "><a href="ch06-08-summary.html"><strong aria-hidden="true">5.2.8.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="ch07-00-events.html"><strong aria-hidden="true">5.3.</strong> Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch07-01-component-events.html"><strong aria-hidden="true">5.3.1.</strong> Component Events</a></li><li class="chapter-item expanded "><a href="ch07-02-dom-events.html"><strong aria-hidden="true">5.3.2.</strong> DOM Events</a></li><li class="chapter-item expanded "><a href="ch07-03-service-events.html"><strong aria-hidden="true">5.3.3.</strong> Service Events</a></li></ol></li><li class="chapter-item expanded "><a href="ch08-00-directives.html"><strong aria-hidden="true">5.4.</strong> Directives</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch08-01-introduction-to-directives.html"><strong aria-hidden="true">5.4.1.</strong> Introduction to Directives</a></li><li class="chapter-item expanded "><a href="ch08-02-attribute-directives.html"><strong aria-hidden="true">5.4.2.</strong> Attribute Directives</a></li><li class="chapter-item expanded "><a href="ch08-03-structural-directives.html"><strong aria-hidden="true">5.4.3.</strong> Structural Directives</a></li><li class="chapter-item expanded "><a href="ch08-04-modifying-host-layout.html"><strong aria-hidden="true">5.4.4.</strong> Modifying Host Element Layout</a></li><li class="chapter-item expanded "><a href="ch08-05-walkthrough-upload-directive.html"><strong aria-hidden="true">5.4.5.</strong> Walkthrough: Upload Directive</a></li></ol></li><li class="chapter-item expanded "><a href="ch09-00-pipes.html"><strong aria-hidden="true">5.5.</strong> Pipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch09-01-pipes-with-parameters.html"><strong aria-hidden="true">5.5.1.</strong> Pipes with Parameters</a></li><li class="chapter-item expanded "><a href="ch09-02-chaining-pipes.html"><strong aria-hidden="true">5.5.2.</strong> Chaining Pipes</a></li><li class="chapter-item expanded "><a href="ch09-03-built-in-pipes.html"><strong aria-hidden="true">5.5.3.</strong> Built-in Pipes</a></li><li class="chapter-item expanded "><a href="ch09-04-custom-pipes.html"><strong aria-hidden="true">5.5.4.</strong> Custom Pipes</a></li><li class="chapter-item expanded "><a href="ch09-05-pure-and-impure-pipes.html" class="active"><strong aria-hidden="true">5.5.5.</strong> Pure And Impure Pipes</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> Global Application Configuration</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.1.</strong> Preparing the Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.2.</strong> Creating the Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.3.</strong> Loading Server-Side Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.4.</strong> Registering Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.5.</strong> Using Configuration Settings</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.</strong> Internationalisation (i18n)</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.1.</strong> Creating Translate Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.2.</strong> Creating Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.3.</strong> Using Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.4.</strong> Switching Languages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.5.</strong> Summary</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Reusable Component Libraries</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Creating new application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Creating component libraries</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Building the packages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Publishing to NPM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Advanced Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Dynamic Content in Angular</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Using with Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Additional Resources</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Preparing new project</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Creating Dockerfile</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> Testing in a container</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.5.</strong> Creating docker-compose.yml</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.6.</strong> Consuming from Docker Hub</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.7.</strong> Automating with Travis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.8.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Webpack</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> Initial project structure</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> Typescript configuration</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> Basic webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.4.</strong> Advanced webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.5.</strong> Unit testing</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Building a Mobile App with Cordova and Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Installing command-line tools</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Generating a new Angular App</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.3.</strong> Routing support</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.4.</strong> Summary</div></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Angular Book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/DenysVuika/angular-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="pure-and-impure-pipes"><a class="header" href="#pure-and-impure-pipes">Pure And Impure Pipes</a></h2>
+<p>Angular supports two different categories of pipes - &quot;pure&quot; and &quot;impure&quot;.
+Every custom pipe is <code>pure</code> by default, but you can change that when using the <code>@Pipe</code> decorator:</p>
+<pre><code class="language-ts">@Pipe({
+  name: 'myCustomPipe',
+  pure: false
+})
+</code></pre>
+<p>Before diving into details on category differences, let's prepare the testing project.</p>
+<p>We are going to display a list of short blog posts filtered by a <code>pure</code> or <code>impure</code> pipe
+and allow creating a new simple blog post entry with various properties like creation date, content or public state.</p>
+<h3 id="preparing-project"><a class="header" href="#preparing-project">Preparing Project</a></h3>
+<p>Use Angular CLI to generate a new project called &quot;pure-impure&quot;.</p>
+<pre><code class="language-sh">ng new pure-impure
+cd pure-impure
+</code></pre>
+<p>As we are going to filter and display Posts let's create a <code>Post</code> interface that defines the main attributes of a Post instance.
+You can do that by utilizing Angular CLI that supports generating interface classes as well.</p>
+<pre><code class="language-sh">ng g interface post
+</code></pre>
+<p>The Angular CLI puts interfaces classes to the <code>src/app</code> folder by default:</p>
+<pre><code class="language-text">installing interface
+  create src/app/post.ts
+</code></pre>
+<p>The bare minimum of properties we need to visualize a post is:</p>
+<ul>
+<li>the text content of the post</li>
+<li>creation date</li>
+<li>a flag indicating whether the post is public or private</li>
+</ul>
+<p>Open the newly generated <code>post.ts</code> file and update it according to the list above:</p>
+<pre><code class="language-ts">// src/app/post.ts
+
+export interface Post {
+  created: Date;
+  content: string;
+  isPublic: boolean;
+}
+</code></pre>
+<p>For the next step let's update the main application component class.
+We need a <code>posts</code> property to hold a collection of created <code>Post</code> instances.
+Also, the <code>newPostContent</code> and <code>newPostPublic</code> properties of <code>string</code> and <code>boolean</code>
+types are going to power our simple post editor.</p>
+<pre><code class="language-ts">// src/app/app.component.ts
+
+import { Post } from './post';
+
+@Component({/*...*/})
+export class AppComponent {
+  // ... 
+
+  posts: Post[] = [];
+
+  newPostContent = '';
+  newPostPublic = true;
+
+  createPost(): void {
+    if (this.newPostContent) {
+      const newPost = &lt;Post&gt; {
+        content: this.newPostContent,
+        isPublic: this.newPostPublic,
+        created: new Date()
+      };
+      this.posts.push(newPost);
+      this.newPostContent = '';
+    }
+  }
+}
+</code></pre>
+<p>The <code>createPost</code> method performs some basic validation for content to be defined and creates a new post.
+The creation date is assigned automatically to current date and time.
+Upon pushing the new post to the <code>posts</code> collection, our <code>createPost</code> method also clears the input field.</p>
+<p>Note that <code>posts</code> collection is defined and initialized with an empty array by default.
+We add items to it via <code>createPost</code> method, but the initial collection is always the same.
+To better demonstrate capabilities of both pipes we also need to change the object reference for the <code>posts</code> collection,
+for example creating a new collection of Post instances, or resetting it by assigning an empty array value.</p>
+<p>For the sake of simplicity let's just be making a copy of the existing collection and reassigning <code>posts</code> property,
+all we need so far is changing the object reference.
+Append the following <code>mutateArray</code> method to the main application component class:</p>
+<pre><code class="language-ts">@Component({ /*...*/ })
+export class AppComponent {
+  // ...
+
+  mutateArray() {
+    this.posts = this.posts.concat();
+  }
+}
+</code></pre>
+<p>Finally edit the component template and add the following HTML content:</p>
+<pre><code class="language-html">&lt;!-- src/app/app.component.html --&gt;
+
+&lt;h2&gt;Posts&lt;/h2&gt;
+&lt;div&gt;
+  &lt;textarea [(ngModel)]=&quot;newPostContent&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; [(ngModel)]=&quot;newPostPublic&quot;&gt;
+    Is Public
+  &lt;/label&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;button (click)=&quot;createPost()&quot;&gt;post&lt;/button&gt;
+  &lt;button (click)=&quot;mutateArray()&quot;&gt;mutate array&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let post of posts&quot;&gt;
+    {{ post.content }} ({{ post.created | date:'short' }})
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>The layout above is pretty simple.
+You get a text area element to enter a content for a new post, a checkbox to toggle the public state,
+and two buttons <code>post</code> and <code>mutate array</code>.
+Under the post editor there is a list of previously created posts, by default it is empty.</p>
+<p>Once you compile and start the application you should see the following:</p>
+<pre><code class="language-sh">ng serve --open
+</code></pre>
+<p><img src="images/pipes-pure-impure-01.png" alt="" /></p>
+<p>Now you are ready testing <code>pure</code> and <code>impure</code> pipes in action.</p>
+<h3 id="pure-pipes"><a class="header" href="#pure-pipes">Pure Pipes</a></h3>
+<p>A &quot;pure pipe&quot; is a pipe that gets executed by Angular only when a &quot;pure change&quot; happens to the underlying input value, for example:</p>
+<ul>
+<li>a &quot;primitive&quot; value changes, for example of a <code>String</code>, <code>Number</code>, <code>Boolean</code> or other <code>primitive</code> types;</li>
+<li>object reference changes, for instance an entire <code>Array</code>, <code>Date</code>, <code>Object</code> and other reference-based types;</li>
+</ul>
+<p>When you use a &quot;pure pipe&quot;, the Angular ignores all changes to the complex objects it gets as input parameters for the pipe.
+For example, when using with arrays, the pipe renders data if your component class initializes default collection of items.
+However, the pipe does not update the view if you add new items to the collection at run time.</p>
+<blockquote>
+<p><strong>Object Reference Checks</strong></p>
+<p>Concerning performance and memory consumption, it is much faster for Angular to perform an object reference check
+rather than initiating a deep check for complex object differences.</p>
+<p>So &quot;pure&quot; pipes are extremely fast if you deal with primitives or change entire input value in your component.
+Angular change detection mechanisms take care of values and execute pipes when needed.</p>
+</blockquote>
+<p>Let's use Angular CLI to generate our simple pure pipe and call it &quot;public-posts&quot;.</p>
+<pre><code class="language-sh">ng g pipe pipes/public-posts
+</code></pre>
+<p>You should get your pipe scaffold and a basic unit test in the <code>src/app/pipes</code> folder:</p>
+<pre><code class="language-text">installing pipe
+  create src/app/pipes/public-posts.pipe.spec.ts
+  create src/app/pipes/public-posts.pipe.ts
+  update src/app/app.module.ts
+</code></pre>
+<p>Edit the <code>public-posts.pipe.ts</code> according to the following example:</p>
+<pre><code class="language-ts">// src/app/pipes/public-posts.pipe.ts
+
+import { Pipe, PipeTransform } from '@angular/core';
+import { Post } from '../post';
+
+@Pipe({
+  name: 'publicPosts'
+})
+export class PublicPostsPipe implements PipeTransform {
+
+  transform(posts: Post[]): any {
+    return posts.filter(p =&gt; p.isPublic);
+  }
+
+}
+</code></pre>
+<p>Essentially the pipe takes a collection of <code>Post</code> instances as an input parameter <code>posts</code>
+and returns a filtered result using <code>isPublic</code> property.</p>
+<blockquote>
+<p><strong>Pipe Name</strong></p>
+<p>Note that your pipe's public name is going to be <code>publicPosts</code>.
+You can give the component class any name you want, in our case, it is <code>PublicPostsPipe</code>,
+but Angular is going to use <code>@Pipe</code> metadata when parsing component templates.</p>
+</blockquote>
+<p>Now let's add a couple of initial posts for our pipe to filter at run time:</p>
+<pre><code class="language-ts">@Component({ /*...*/ })
+export class AppComponent {
+
+  posts: Post[] = [
+    &lt;Post&gt; { 
+      content: 'default public post', 
+      isPublic: true, 
+      created: new Date() 
+    },
+    &lt;Post&gt; { 
+      content: 'default private post', 
+      isPublic: false, 
+      created: new Date() 
+    }
+  ];
+
+}
+</code></pre>
+<p>The first post is going to be public while the second one is configured to be private by default.</p>
+<p>For the next step, please update the application component template to show the <code>posts</code> collection,
+filtered by our <code>publicPosts</code> pipe, in a separate unstructured list element.</p>
+<pre><code class="language-html">&lt;h3&gt;Public posts (pure)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let post of posts | publicPosts&quot;&gt;
+    {{ post.content }} ({{ post.created | date:'short' }})
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;All posts&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let post of posts&quot;&gt;
+    {{ post.content }} ({{ post.created | date:'short' }})
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>If you run your application right now, you should see one entry in the &quot;Public posts&quot; list and two entries in the &quot;All posts&quot; one.</p>
+<p><img src="images/pipes-pure-01.png" alt="" /></p>
+<p>So the pipe is working with predefined data as we expect it.
+Now try adding couple more posts by entering content into the input area and clicking the &quot;post&quot; button.
+Please ensure that &quot;Is Public&quot; checkbox element is set to &quot;checked&quot; state.</p>
+<p>You should see the &quot;All posts&quot; list is getting updated, while &quot;Public posts&quot; one remains the same.
+That is the expected behavior as we are modifying a complex object, in this case, an array of Post instances,
+without actually changing object reference for the pipe.</p>
+<p><img src="images/pipes-pure-02.png" alt="" /></p>
+<p>The &quot;All posts&quot; list uses the <code>ngFor</code> directive, so Angular detects the change and updates it accordingly.
+During the preparation phase, we have created a &quot;mutate array&quot; button that modifies <code>posts</code>
+by replacing the collection with its copy.</p>
+<p>If you click this button right now the &quot;Public posts&quot; should instantly update the view with new values:</p>
+<p><img src="images/pipes-pure-03.png" alt="" /></p>
+<h3 id="impure-pipes"><a class="header" href="#impure-pipes">Impure Pipes</a></h3>
+<p>An &quot;impure pipe&quot; is a pipe that gets executed by Angular during every component change detection cycle.
+All custom pipes are &quot;pure&quot; by default, in order to change its state to &quot;impure&quot;
+you need to explicitly define that in the <code>@Pipe</code> decorator metadata:</p>
+<pre><code class="language-ts">@Pipe({
+  name: 'myCustomPipe',
+  pure: false
+})
+</code></pre>
+<blockquote>
+<p><strong>Performance</strong></p>
+<p>A single component may cause many change detection cycles based on various factors,
+for example, user interaction, keyboard or mouse events.</p>
+<p>Keep in mind that you pipe may affect overall application performance if it is slow,
+or not optimized for frequent runs (data caching for instance).</p>
+</blockquote>
+<p>Let's create another pipe scaffold called &quot;public-posts-impure&quot; in the same project using Angular CLI:</p>
+<pre><code class="language-sh">ng g pipe pipes/public-posts-impure
+</code></pre>
+<p>The command above should produce a new pipe next to the existing one in the <code>src/app/pipes</code> folder.</p>
+<pre><code class="language-text">installing pipe
+  create src/app/pipes/public-posts-impure.pipe.spec.ts
+  create src/app/pipes/public-posts-impure.pipe.ts
+  update src/app/app.module.ts
+</code></pre>
+<p>Next, update the pipe code like in the example below:</p>
+<pre><code class="language-ts">// src/app/pipes/public-posts-impure.pipe.ts
+
+import { Pipe, PipeTransform } from '@angular/core';
+import { Post } from '../post';
+
+@Pipe({
+  name: 'publicPostsImpure',
+  pure: false
+})
+export class PublicPostsImpurePipe implements PipeTransform {
+
+  transform(posts: Post[]): any {
+    return posts.filter(p =&gt; p.isPublic);
+  }
+
+}
+</code></pre>
+<p>The implementation of the pipe is pretty much the same we used before.
+It takes a collection of posts as an input and returns a filtered result based on public state via <code>isPublic</code> property values.</p>
+<p>We are going to use this pipe as &quot;publicPostsImpure&quot; in the HTML templates,
+and we also explicitly set the <code>pure</code> property value in the <code>@Pipe</code> decorator metadata to false:</p>
+<pre><code class="language-ts">@Pipe({
+  name: 'publicPostsImpure',
+  pure: false
+})
+</code></pre>
+<p>Finally extend the main application component template with the list showing all public posts
+filtered by the <code>publicPostsImpure</code> pipe:</p>
+<pre><code class="language-html">&lt;h3&gt;Public posts (impure)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let post of posts | publicPostsImpure&quot;&gt;
+    {{ post.content }} ({{ post.created | date:'short' }})
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>This time if you run the application and add several posts with &quot;Is Public&quot; element checked,
+you should see the &quot;Public posts (impure)&quot; list gets updated at real-time.
+That happens because our custom <code>publicPostsImpure</code> pipe gets executed by Angular during each change detection cycle.</p>
+<p><img src="images/pipes-impure-01.png" alt="" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch09-04-custom-pipes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="ch09-04-custom-pipes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'G-23X2CQXZ48', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

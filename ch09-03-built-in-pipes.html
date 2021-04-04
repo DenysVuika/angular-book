@@ -1,0 +1,955 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Built-in Pipes - Angular Book</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title-page.html">The Angular Book</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-prerequisites.html"><strong aria-hidden="true">1.</strong> Prerequisites</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch01-01-node.html"><strong aria-hidden="true">1.1.</strong> Node</a></li><li class="chapter-item expanded "><a href="ch01-02-vscode.html"><strong aria-hidden="true">1.2.</strong> Visual Studio Code</a></li></ol></li><li class="chapter-item expanded "><a href="ch02-00-es6.html"><strong aria-hidden="true">2.</strong> ES6</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-classes.html"><strong aria-hidden="true">2.1.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch02-02-inheritance.html"><strong aria-hidden="true">2.2.</strong> Inheritance</a></li><li class="chapter-item expanded "><a href="ch02-03-arrow-functions.html"><strong aria-hidden="true">2.3.</strong> Arrow Functions</a></li><li class="chapter-item expanded "><a href="ch02-04-template-literals.html"><strong aria-hidden="true">2.4.</strong> Template Literals</a></li><li class="chapter-item expanded "><a href="ch02-05-extended-parameters.html"><strong aria-hidden="true">2.5.</strong> Extended Parameter Handling</a></li><li class="chapter-item expanded "><a href="ch02-06-destructuring.html"><strong aria-hidden="true">2.6.</strong> Destructuring Assignment</a></li><li class="chapter-item expanded "><a href="ch02-07-modules.html"><strong aria-hidden="true">2.7.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch02-08-see-also.html"><strong aria-hidden="true">2.8.</strong> See Also</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-typescript.html"><strong aria-hidden="true">3.</strong> TypeScript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-01-getting-started.html"><strong aria-hidden="true">3.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch03-02-features.html"><strong aria-hidden="true">3.2.</strong> TypeScript Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch03-03-types.html"><strong aria-hidden="true">3.2.1.</strong> Types</a></li><li class="chapter-item expanded "><a href="ch03-04-classes.html"><strong aria-hidden="true">3.2.2.</strong> Classes</a></li><li class="chapter-item expanded "><a href="ch03-05-interfaces.html"><strong aria-hidden="true">3.2.3.</strong> Interfaces</a></li><li class="chapter-item expanded "><a href="ch03-06-abstract-classes.html"><strong aria-hidden="true">3.2.4.</strong> Abstract Classes</a></li><li class="chapter-item expanded "><a href="ch03-07-modules.html"><strong aria-hidden="true">3.2.5.</strong> Modules</a></li><li class="chapter-item expanded "><a href="ch03-08-decorators.html"><strong aria-hidden="true">3.2.6.</strong> Decorators</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="ch04-00-angular-cli.html"><strong aria-hidden="true">4.</strong> Angular CLI</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-installing.html"><strong aria-hidden="true">4.1.</strong> Installing</a></li><li class="chapter-item expanded "><a href="ch04-02-first-application.html"><strong aria-hidden="true">4.2.</strong> Your First Application</a></li><li class="chapter-item expanded "><a href="ch04-03-running-application.html"><strong aria-hidden="true">4.3.</strong> Running Application</a></li><li class="chapter-item expanded "><a href="ch04-04-linting.html"><strong aria-hidden="true">4.4.</strong> Code Linting</a></li><li class="chapter-item expanded "><a href="ch04-05-testing.html"><strong aria-hidden="true">4.5.</strong> Unit Tests</a></li><li class="chapter-item expanded "><a href="ch04-06-coverage.html"><strong aria-hidden="true">4.6.</strong> Code Coverage</a></li><li class="chapter-item expanded "><a href="ch04-07-development-and-production-builds.html"><strong aria-hidden="true">4.7.</strong> Development and Production Builds</a></li><li class="chapter-item expanded "><a href="ch04-08-using-blueprints.html"><strong aria-hidden="true">4.8.</strong> Using Blueprints</a></li><li class="chapter-item expanded "><a href="ch04-09-creating-modules.html"><strong aria-hidden="true">4.9.</strong> Creating Modules</a></li><li class="chapter-item expanded "><a href="ch04-10-routing-support.html"><strong aria-hidden="true">4.10.</strong> Routing Support</a></li><li class="chapter-item expanded "><a href="ch04-11-generating-standalone-scripts.html"><strong aria-hidden="true">4.11.</strong> Generating Standalone Scripts</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-angular.html"><strong aria-hidden="true">5.</strong> Angular</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-01-components.html"><strong aria-hidden="true">5.1.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch05-02-creating-a-simple-component.html"><strong aria-hidden="true">5.1.1.</strong> Creating a Simple Component</a></li><li class="chapter-item expanded "><a href="ch05-03-generating-components-with-angular-cli.html"><strong aria-hidden="true">5.1.2.</strong> Generating Components with Angular CLI</a></li><li class="chapter-item expanded "><a href="ch05-04-component-metadata.html"><strong aria-hidden="true">5.1.3.</strong> Component Metadata</a></li><li class="chapter-item expanded "><a href="ch05-05-templates.html"><strong aria-hidden="true">5.1.4.</strong> Templates</a></li><li class="chapter-item expanded "><a href="ch05-06-styles.html"><strong aria-hidden="true">5.1.5.</strong> Styles</a></li><li class="chapter-item expanded "><a href="ch05-07-input-properties.html"><strong aria-hidden="true">5.1.6.</strong> Input Properties</a></li><li class="chapter-item expanded "><a href="ch05-08-output-events.html"><strong aria-hidden="true">5.1.7.</strong> Output Events</a></li><li class="chapter-item expanded "><a href="ch05-09-providers.html"><strong aria-hidden="true">5.1.8.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch05-10-host.html"><strong aria-hidden="true">5.1.9.</strong> Host</a></li><li class="chapter-item expanded "><a href="ch05-11-queries.html"><strong aria-hidden="true">5.1.10.</strong> Queries</a></li><li class="chapter-item expanded "><a href="ch05-12-component-lifecycle.html"><strong aria-hidden="true">5.1.11.</strong> Component Lifecycle</a></li><li class="chapter-item expanded "><a href="ch05-13-content-projection.html"><strong aria-hidden="true">5.1.12.</strong> Content Projection</a></li></ol></li><li class="chapter-item expanded "><a href="ch06-00-dependency-injection.html"><strong aria-hidden="true">5.2.</strong> Dependency Injection</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch06-01-preparing-a-project.html"><strong aria-hidden="true">5.2.1.</strong> Preparing a Project</a></li><li class="chapter-item expanded "><a href="ch06-02-services.html"><strong aria-hidden="true">5.2.2.</strong> Services</a></li><li class="chapter-item expanded "><a href="ch06-03-providers.html"><strong aria-hidden="true">5.2.3.</strong> Providers</a></li><li class="chapter-item expanded "><a href="ch06-04-injection-tokens.html"><strong aria-hidden="true">5.2.4.</strong> Injection Tokens</a></li><li class="chapter-item expanded "><a href="ch06-05-injecting-multiple-instances.html"><strong aria-hidden="true">5.2.5.</strong> Injecting Multiple Instances</a></li><li class="chapter-item expanded "><a href="ch06-06-optional-dependencies.html"><strong aria-hidden="true">5.2.6.</strong> Optional Dependencies</a></li><li class="chapter-item expanded "><a href="ch06-07-manual-injection.html"><strong aria-hidden="true">5.2.7.</strong> Manual Injection</a></li><li class="chapter-item expanded "><a href="ch06-08-summary.html"><strong aria-hidden="true">5.2.8.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="ch07-00-events.html"><strong aria-hidden="true">5.3.</strong> Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch07-01-component-events.html"><strong aria-hidden="true">5.3.1.</strong> Component Events</a></li><li class="chapter-item expanded "><a href="ch07-02-dom-events.html"><strong aria-hidden="true">5.3.2.</strong> DOM Events</a></li><li class="chapter-item expanded "><a href="ch07-03-service-events.html"><strong aria-hidden="true">5.3.3.</strong> Service Events</a></li></ol></li><li class="chapter-item expanded "><a href="ch08-00-directives.html"><strong aria-hidden="true">5.4.</strong> Directives</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch08-01-introduction-to-directives.html"><strong aria-hidden="true">5.4.1.</strong> Introduction to Directives</a></li><li class="chapter-item expanded "><a href="ch08-02-attribute-directives.html"><strong aria-hidden="true">5.4.2.</strong> Attribute Directives</a></li><li class="chapter-item expanded "><a href="ch08-03-structural-directives.html"><strong aria-hidden="true">5.4.3.</strong> Structural Directives</a></li><li class="chapter-item expanded "><a href="ch08-04-modifying-host-layout.html"><strong aria-hidden="true">5.4.4.</strong> Modifying Host Element Layout</a></li><li class="chapter-item expanded "><a href="ch08-05-walkthrough-upload-directive.html"><strong aria-hidden="true">5.4.5.</strong> Walkthrough: Upload Directive</a></li></ol></li><li class="chapter-item expanded "><a href="ch09-00-pipes.html"><strong aria-hidden="true">5.5.</strong> Pipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch09-01-pipes-with-parameters.html"><strong aria-hidden="true">5.5.1.</strong> Pipes with Parameters</a></li><li class="chapter-item expanded "><a href="ch09-02-chaining-pipes.html"><strong aria-hidden="true">5.5.2.</strong> Chaining Pipes</a></li><li class="chapter-item expanded "><a href="ch09-03-built-in-pipes.html" class="active"><strong aria-hidden="true">5.5.3.</strong> Built-in Pipes</a></li><li class="chapter-item expanded "><a href="ch09-04-custom-pipes.html"><strong aria-hidden="true">5.5.4.</strong> Custom Pipes</a></li><li class="chapter-item expanded "><a href="ch09-05-pure-and-impure-pipes.html"><strong aria-hidden="true">5.5.5.</strong> Pure And Impure Pipes</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.</strong> Global Application Configuration</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.1.</strong> Preparing the Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.2.</strong> Creating the Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.3.</strong> Loading Server-Side Configuration File</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.4.</strong> Registering Configuration Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.6.5.</strong> Using Configuration Settings</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.</strong> Internationalisation (i18n)</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.1.</strong> Creating Translate Service</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.2.</strong> Creating Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.3.</strong> Using Translate Pipe</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.4.</strong> Switching Languages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.7.5.</strong> Summary</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> Reusable Component Libraries</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">6.1.</strong> Creating new application</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Creating component libraries</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Building the packages</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Publishing to NPM</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.5.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Advanced Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> Dynamic Content in Angular</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> Using with Docker</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> Additional Resources</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> Preparing new project</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.3.</strong> Creating Dockerfile</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.4.</strong> Testing in a container</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.5.</strong> Creating docker-compose.yml</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.6.</strong> Consuming from Docker Hub</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.7.</strong> Automating with Travis</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.8.</strong> See also</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> Webpack</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> Initial project structure</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> Typescript configuration</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.3.</strong> Basic webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.4.</strong> Advanced webpack setup</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.5.</strong> Unit testing</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> Building a Mobile App with Cordova and Angular</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">10.1.</strong> Installing command-line tools</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.2.</strong> Generating a new Angular App</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.3.</strong> Routing support</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.4.</strong> Summary</div></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Angular Book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/DenysVuika/angular-book" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="built-in-pipes"><a class="header" href="#built-in-pipes">Built-in Pipes</a></h2>
+<p>Angular provides a set of handy pipes out of the box.
+All of them can save your time and significantly reduce coding efforts related to values transformation and formatting.</p>
+<p>You can notice that many pipes have similar usage format, so it should be pretty easy to remember most of the use cases.
+Let's start with simple pipes and proceed to more complex by the end of this chapter.</p>
+<h3 id="uppercase"><a class="header" href="#uppercase">UpperCase</a></h3>
+<p>The <code>UpperCasePipe</code> pipe transforms text to upper case and has the following usage format:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;string_expression&gt; | uppercase }}
+&lt;/element&gt;
+</code></pre>
+<p>You can use it with text expressions inside HTML element body or property binding:</p>
+<pre><code class="language-html">&lt;h2&gt;Uppercase&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;'Hello world' =&gt; {{ 'Hellow world' | uppercase }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>You can see the result of the rendering below:</p>
+<p><img src="images/pipes-uppercase-01.png" alt="Uppercase Pipe" /></p>
+<p>This pipe does not have any additional parameters.</p>
+<h3 id="lowercase"><a class="header" href="#lowercase">LowerCase</a></h3>
+<p>The <code>LowerCasePipe</code> pipe transforms text to lower case and has the following usage format:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;string_expression&gt; | lowercase }}
+&lt;/element&gt;
+</code></pre>
+<p>Here's the basic example of using <code>LowerCasePipe</code> in practice:</p>
+<pre><code class="language-html">&lt;h2&gt;Lowercase&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;'hELLO wORLD' =&gt; {{ 'hELLO wORLD' | lowercase }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Which gives you the following result once application runs:</p>
+<p><img src="images/pipes-lowercase-01.png" alt="LowerCase Pipe" /></p>
+<p>This pipe does not have any additional parameters.</p>
+<h3 id="titlecase"><a class="header" href="#titlecase">TitleCase</a></h3>
+<p>The <code>TitleCasePipe</code> converts input text to the title case.
+That means that first character gets converted to upper case while the rest of the string becomes lowercased.</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;text_expression&gt; | titlecase }}
+&lt;/element&gt;
+</code></pre>
+<p>Converting to title case becomes handy when dealing with usernames.</p>
+<p>Your application may have an input form, like a personal profile, where users can enter their first and last names for instance.
+Regardless of the actual value, whether it is &quot;john&quot; or &quot;jOHN&quot;, you can render it like a &quot;John&quot; at run time:</p>
+<pre><code class="language-html">&lt;h2&gt;Titlecase&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;'jOHN' =&gt; {{ 'jOHN' | titlecase }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>That turns into the following once your application runs:</p>
+<p><img src="images/pipes-titlecase-01.png" alt="TitleCase Pipe" /></p>
+<p>This pipe does not have any additional parameters.</p>
+<h3 id="date"><a class="header" href="#date">Date</a></h3>
+<p>You have already seen the <code>DatePipe</code> usage earlier in this chapter.
+This pipe allows you to format a date value using a custom or one of the predefined locale rules.</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;date_expression&gt; | date[:format] }}
+&lt;/element&gt;
+</code></pre>
+<p>Where <code>date_expression</code> is date represented by an <code>object</code>, a <code>number</code> holding amount of milliseconds since UTC epoch,
+an <a href="https://www.w3.org/TR/NOTE-datetime">ISO string</a>, or a function or method call evaluating to these values at run time.</p>
+<h4 id="custom-formatting-rules"><a class="header" href="#custom-formatting-rules">Custom formatting rules</a></h4>
+<p>According to the Angular documentation you can provide a custom date format based on the following rules:</p>
+<table><thead><tr><th align="left">Component</th><th align="center">Symbol</th><th align="center">Narrow</th><th align="center">Short</th><th align="center">Long</th><th align="center">Numeric</th><th align="center">2-digit</th></tr></thead><tbody>
+<tr><td align="left">era</td><td align="center">G</td><td align="center">G (A)</td><td align="center">GGG (AD)</td><td align="center">GGGG (Anno Domini)</td><td align="center">---</td><td align="center">---</td></tr>
+<tr><td align="left">year</td><td align="center">y</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">y (2015)</td><td align="center">yy (15)</td></tr>
+<tr><td align="left">month</td><td align="center">M</td><td align="center">L (S)</td><td align="center">MMM (Sep)</td><td align="center">MMMM (September)</td><td align="center">M (9)</td><td align="center">MM (09)</td></tr>
+<tr><td align="left">day</td><td align="center">d</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">d (3)</td><td align="center">dd (03)</td></tr>
+<tr><td align="left">weekday</td><td align="center">E</td><td align="center">E (S)</td><td align="center">EEE (Sun)</td><td align="center">EEEE (Sunday)</td><td align="center">---</td><td align="center">---</td></tr>
+<tr><td align="left">hour</td><td align="center">j</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">j (13)</td><td align="center">jj (13)</td></tr>
+<tr><td align="left">hour12</td><td align="center">h</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">h (1 PM)</td><td align="center">hh (01 PM)</td></tr>
+<tr><td align="left">hour24</td><td align="center">H</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">H (13)</td><td align="center">HH (13)</td></tr>
+<tr><td align="left">minute</td><td align="center">m</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">m (5)</td><td align="center">mm (05)</td></tr>
+<tr><td align="left">second</td><td align="center">s</td><td align="center">---</td><td align="center">---</td><td align="center">---</td><td align="center">s (9)</td><td align="center">ss (09)</td></tr>
+<tr><td align="left">timezone</td><td align="center">z</td><td align="center">---</td><td align="center">---</td><td align="center">z (Pacific Standard Time)</td><td align="center">---</td><td align="center">---</td></tr>
+<tr><td align="left">timezone</td><td align="center">Z</td><td align="center">---</td><td align="center">Z (GMT-8:00)</td><td align="center">---</td><td align="center">---</td><td align="center">---</td></tr>
+<tr><td align="left">timezone</td><td align="center">a</td><td align="center">---</td><td align="center">a (PM)</td><td align="center">---</td><td align="center">---</td><td align="center">---</td></tr>
+</tbody></table>
+<p>As you can see from the table above, there may be plenty of different combinations depending on how you want a date and time presented.
+If you want to get a year portion as a full 4-digit value you are going to take <code>y</code> symbol (<code>2017</code>), or <code>yy</code> for a 2-digit only (<code>17</code>).
+Some of the date components support multiple presentations.</p>
+<p>Assuming your browser is set to <code>en-UK</code> locale, for example,
+you can display <code>September</code> month as <code>S</code> using its narrow form via <code>L</code> symbol,
+short form <code>Sep</code> using <code>MMM</code> symbol, long <code>September</code> form with <code>MMMM</code>, or numeric forms <code>9</code>
+and double-digit <code>09</code> by means of <code>M</code> and <code>MM</code> symbols respectively.</p>
+<p>Note that you can use any other symbol as a date component separator, for instance:</p>
+<ul>
+<li>dd/MM/yy =&gt; 13/04/79</li>
+<li>dd-MM-yy =&gt; 13-04-79</li>
+<li>dd=MM=yy =&gt; 13=04=79</li>
+</ul>
+<p>Here's a basic example you can try with the main application component:</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+  
+  birthday = new Date(1879, 3, 14);
+}
+</code></pre>
+<pre><code class="language-html">&lt;h2&gt;Date (custom formats)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;{{'1879-03-14' | date:'yMMMdjms'}}&lt;/li&gt;
+  &lt;li&gt;dd/MM/yy: {{ birthday | date:'dd/MM/yy' }}&lt;/li&gt;
+  &lt;li&gt;EEE, MMMM dd, yyyy: {{ birthday | date:'EEE, MMMM dd, yyyy' }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>The result should be something like the following:</p>
+<p><img src="images/pipes-date-05.png" alt="" /></p>
+<p>The <code>Date</code> pipe is going to use the end user's locale when formatting time zones.
+Note that when you use an <a href="https://www.w3.org/TR/NOTE-datetime">ISO string</a> with no time portion,
+for example, <code>1879-03-14</code>, the pipe does not apply time zone offset.</p>
+<pre><code class="language-html">&lt;element{{'1879-03-14' | date:'yMMMdjms'}}&lt;/element&gt;
+&lt;!-- Mar 14, 1879, 12:00:00 AM --&gt;
+</code></pre>
+<blockquote>
+<p><strong>Internationalisation API</strong></p>
+<p>This pipe is using Internationalisation API that may not be fully supported by all modern browsers.
+You can use <a href="https://cdn.polyfill.io/v2/docs/">Polyfill.io</a> service
+to get the <code>Intl</code> polyfill only if your user's current browser needs it.</p>
+<p>Also, you can see details and additional options at the project side: <a href="https://github.com/andyearnshaw/Intl.js/">Intl.js</a></p>
+</blockquote>
+<h4 id="predefined-formatting-rules"><a class="header" href="#predefined-formatting-rules">Predefined formatting rules</a></h4>
+<p>The <code>DatePipe</code> pipe comes with the following predefined rules to help you formatting the dates:</p>
+<table><thead><tr><th>Name</th><th>Value</th><th>Example output (<code>en-UK</code>)</th></tr></thead><tbody>
+<tr><td>medium</td><td>yMMMdjms</td><td><code>Apr 13, 1879, 11:00:00 PM</code></td></tr>
+<tr><td>short</td><td>yMdjm</td><td><code>4/13/1879, 11:00 PM</code></td></tr>
+<tr><td>fullDate</td><td>yMMMMEEEEd</td><td><code>Sunday, April 13, 1879</code></td></tr>
+<tr><td>longDate</td><td>yMMMMd</td><td><code>April 13, 1879</code></td></tr>
+<tr><td>mediumDate</td><td>yMMMd</td><td><code>Apr 13, 1879</code></td></tr>
+<tr><td>shortDate</td><td>yMd</td><td><code>4/13/1879</code></td></tr>
+<tr><td>mediumTime</td><td>jms</td><td><code>11:00:00 PM</code></td></tr>
+<tr><td>shortTime</td><td>jm</td><td><code>11:00 PM</code></td></tr>
+</tbody></table>
+<p>You can use the following HTML template and corresponding component property <code>birthday</code> to test all the rules:</p>
+<pre><code class="language-html">&lt;h2&gt;Date (predefined formats)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;medium: {{ birthday | date:'medium' }}&lt;/li&gt;
+  &lt;li&gt;short: {{ birthday | date:'short' }}&lt;/li&gt;
+  &lt;li&gt;fullDate: {{ birthday | date:'fullDate' }}&lt;/li&gt;
+  &lt;li&gt;longDate: {{ birthday | date:'longDate' }}&lt;/li&gt;
+  &lt;li&gt;mediumDate: {{ birthday | date:'mediumDate' }}&lt;/li&gt;
+  &lt;li&gt;shortDate: {{ birthday | date:'shortDate' }}&lt;/li&gt;
+  &lt;li&gt;mediumTime: {{ birthday | date:'mediumTime'}}&lt;/li&gt;
+  &lt;li&gt;shortTime: {{ birthday | date:'shortTime' }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+  
+  birthday = new Date(1879, 3, 14);
+}
+</code></pre>
+<p>So that should give you the following result at run time:</p>
+<p><img src="images/pipes-date-04.png" alt="" /></p>
+<h2 id="decimal"><a class="header" href="#decimal">Decimal</a></h2>
+<p>The <code>DecimalPipe</code> pipe formats a number as text, taking into account user's locale and optionally custom display format.</p>
+<p>The usage format of the pipe is as follows:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;number_expression&gt; | number[:digitFormat] }}
+&lt;/element&gt;
+</code></pre>
+<p>Where the <code>digitFormat</code> value is represented by the following formatting rule:</p>
+<pre><code class="language-text">minIntegerDigits.minFractionDigits-maxFractionDigits
+</code></pre>
+<table><thead><tr><th>Component</th><th align="center">Default Value</th><th>Description</th></tr></thead><tbody>
+<tr><td>minIntegerDigits</td><td align="center">1</td><td>Minimum number of digits to use when converting to text.</td></tr>
+<tr><td>minFractionDigits</td><td align="center">0</td><td>Minimum number of digits after fraction.</td></tr>
+<tr><td>maxFractionDigits</td><td align="center">3</td><td>Maximum number of digits after fraction.</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>Minimum Numbers</strong></p>
+<p>By setting the minimum numbers like <code>minIntegerDigits</code> and <code>minFractionDigits</code>, you enforce resulting value to have a certain size.
+The pipe automatically adds leading or trailing zeros if the actual value is less than expected.</p>
+<p>For example applying a minimum number of <code>3</code> to the value <code>1</code> results in <code>003</code> text rendered by the pipe.</p>
+</blockquote>
+<p>Let's now see how this pipe works in practice.
+Open existing or create a new Angular application and put the following block to the main application component template:</p>
+<pre><code class="language-html">&lt;h2&gt;Decimal (12.123456)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;number =&gt; {{ 12.123456 | number }}&lt;/li&gt;
+  &lt;li&gt;number:'2.1-2' =&gt; {{ 12.123456 | number:'2.1-2' }}&lt;/li&gt;
+  &lt;li&gt;number:'3.0-0' =&gt; {{ 12.123456 | number:'3.0-0' }}&lt;/li&gt;
+  &lt;li&gt;number:'3.10-15' =&gt; {{ 12.123456 | number:'3.10-15' }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>The example above renders to the following:</p>
+<p><img src="images/pipes-decimal-01.png" alt="" /></p>
+<p>Please note the last case in the example above.
+It demonstrates how leading, and trailing zeros get added to the output based on conditions.</p>
+<blockquote>
+<p><strong>Internationalization API</strong></p>
+<p>This pipe is using Internationalization API that may not be fully supported by all modern browsers.
+You can use <a href="https://cdn.polyfill.io/v2/docs/">Polyfill.io</a> service to get the <code>Intl</code> polyfill only if your user's current browser needs it.</p>
+<p>Also, you can see details and additional options at the project side: <a href="https://github.com/andyearnshaw/Intl.js/">Intl.js</a></p>
+</blockquote>
+<h3 id="currency"><a class="header" href="#currency">Currency</a></h3>
+<p>The <code>CurrencyPipe</code> pipe formats a number as a currency text, taking into account user's locale and optionally custom display format.</p>
+<p>You can use this pipe with three optional parameters by utilizing the following format:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;number_expression&gt; | currency[:code[:symbol[:digitFormat]]] }}
+&lt;/element&gt;
+</code></pre>
+<p>The <code>code</code> is a parameter of <code>string</code> type that refers to <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a> currency code.
+For example, you can use <code>GBP</code> for the Great Britain Pound Sterling, or <code>USD</code> for United States Dollar.</p>
+<p>The <code>symbol</code> parameter holds <code>boolean</code> value to indicate whether pipe needs to render currency symbol like £ or just use the currency code value, in this case, <code>GBP</code>.
+This parameter defaults to <code>false</code> and <code>CurrencyPipe</code> is going to use currency codes if <code>symbol</code> parameter is not defined explicitly.</p>
+<p>Finally, the <code>digitFormat</code> value is the same as of the <code>DecimalPipe</code>, and is represented by the following formatting rule:</p>
+<pre><code class="language-text">minIntegerDigits.minFractionDigits-maxFractionDigits
+</code></pre>
+<table><thead><tr><th>Component</th><th align="center">Default Value</th><th>Description</th></tr></thead><tbody>
+<tr><td>minIntegerDigits</td><td align="center">1</td><td>Minimum number of digits to use when converting to text.</td></tr>
+<tr><td>minFractionDigits</td><td align="center">0</td><td>Minimum number of digits after fraction.</td></tr>
+<tr><td>maxFractionDigits</td><td align="center">3</td><td>Maximum number of digits after fraction.</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>Minimum Numbers</strong></p>
+<p>By setting the minimum numbers like <code>minIntegerDigits</code> and <code>minFractionDigits</code>, you enforce resulting value to have a certain size.
+The pipe automatically adds leading or trailing zeros if the actual value is less than expected.</p>
+<p>For example applying a minimum number of <code>3</code> to the value <code>1</code> results in <code>003</code> text rendered by the pipe.</p>
+</blockquote>
+<p>Below is a set of examples to demonstrate the pipe in action:</p>
+<pre><code class="language-html">&lt;h2&gt;Currency&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;GBP (code): {{ 150 | currency:'GBP' }}&lt;/li&gt;
+  &lt;li&gt;GBP (symbol): {{ 150 | currency:'GBP':true }}&lt;/li&gt;
+  &lt;li&gt;USD: {{ 0.9876 | currency:'USD':true:'2.2-2' }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Once your application starts you should see the following output:</p>
+<p><img src="images/pipes-currency-01.png" alt="" /></p>
+<blockquote>
+<p><strong>Internationalization API</strong></p>
+<p>This pipe is using Internationalization API that may not be fully supported by all modern browsers.
+You can use <a href="https://cdn.polyfill.io/v2/docs/">Polyfill.io</a> service to get the <code>Intl</code> polyfill only if your user's current browser needs it.</p>
+<p>Also, you can see details and additional options at the project side: <a href="https://github.com/andyearnshaw/Intl.js/">Intl.js</a></p>
+</blockquote>
+<h3 id="percent"><a class="header" href="#percent">Percent</a></h3>
+<p>The <code>PercentPipe</code> formats a number input as a percentage, where &quot;1&quot; corresponds to &quot;100%&quot;,
+and &quot;0.5&quot; for instance corresponds to &quot;50%&quot;.
+This pipe also takes into account user's locale and allows you to customize resulting numeric format if needed.</p>
+<p>The usage format is similar to that of the <code>DecimalPipe</code>, <code>CurrencyPipe</code>
+and many other number-based pipes Angular provides out of the box:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;number_expression&gt; | percent[:digitFormat] }}
+&lt;/element&gt;
+</code></pre>
+<p>Where the <code>digitFormat</code> value is represented by the following formatting rule:</p>
+<pre><code class="language-text">minIntegerDigits.minFractionDigits-maxFractionDigits
+</code></pre>
+<table><thead><tr><th>Component</th><th align="center">Default Value</th><th>Description</th></tr></thead><tbody>
+<tr><td>minIntegerDigits</td><td align="center">1</td><td>Minimum number of digits to use when converting to text.</td></tr>
+<tr><td>minFractionDigits</td><td align="center">0</td><td>Minimum number of digits after fraction.</td></tr>
+<tr><td>maxFractionDigits</td><td align="center">3</td><td>Maximum number of digits after fraction.</td></tr>
+</tbody></table>
+<blockquote>
+<p><strong>Minimum Numbers</strong></p>
+<p>By setting the minimum numbers like <code>minIntegerDigits</code> and <code>minFractionDigits</code>, you enforce resulting value to have a certain size.
+The pipe automatically adds leading or trailing zeros if the actual value is less than expected.</p>
+<p>For example applying a minimum number of <code>3</code> to the value <code>1</code> results in <code>003</code> text rendered by the pipe.</p>
+</blockquote>
+<p>Now create a new Angular project or open an existing one and append the following block to the main application component template:</p>
+<pre><code class="language-html">&lt;h2&gt;Percent&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.0 equals to {{ 1.0 | percent }}&lt;/li&gt;
+  &lt;li&gt;0.5 equals to {{ 0.5 | percent }}&lt;/li&gt;
+  &lt;li&gt;0.123456 equals to {{ 0.123456 | percent }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>If you run the application with the code above you should see the following output:</p>
+<p><img src="images/pipes-percent-01.png" alt="Percent Pipe" /></p>
+<p>Notice that by default <code>PercentPipe</code> displays three digits after the fraction, so <code>0.123456</code> gets rounded and shown as <code>12.346</code>.</p>
+<p>As with other number conversion pipes, you are also able to control how <code>PercentPipe</code> displays digits after fraction.
+For example, let's make the transformed output more precise and render five numbers instead of the default three:</p>
+<pre><code class="language-html">&lt;h2&gt;Percent&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;0.123456 corresponds to {{ 0.123456 | percent:'1.1-5' }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>This time we should see the full number as we define it initially, and without rounding:</p>
+<p><img src="images/pipes-percent-02.png" alt="Formatted Percent Pipe" /></p>
+<p>It is also possible to add leading zero to the final output by putting a minimum threshold for the number of digits:</p>
+<pre><code class="language-html">&lt;h2&gt;Percent&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;0.025 corresponds to {{ 0.025 | percent:'2.1' }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>The example above shows how to force <code>PercentPipe</code> always to use two numbers during conversion,
+so you are going to get a leading zero for small values.</p>
+<p><img src="images/pipes-percent-03.png" alt="Forced Formatting for Percent Pipe" /></p>
+<blockquote>
+<h2 id="internationalization-api"><a class="header" href="#internationalization-api">Internationalization API</a></h2>
+<p>This pipe is using Internationalization API that may not be fully supported by all modern browsers.
+You can use <a href="https://cdn.polyfill.io/v2/docs/">Polyfill.io</a> service to get the <code>Intl</code> polyfill only if your user's current browser needs it.</p>
+<p>Also, you can see details and additional options at the project side: <a href="https://github.com/andyearnshaw/Intl.js/">Intl.js</a></p>
+</blockquote>
+<h3 id="json"><a class="header" href="#json">Json</a></h3>
+<p>The <code>JsonPipe</code> pipe often helps with debugging your Angular code.
+Its main purpose is converting JavaScript objects into JSON strings.</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;object_expression&gt; | json }}
+&lt;/element&gt;
+</code></pre>
+<p>You are going to use this pipe if you want to peek inside a payload or response object coming from HTTP service call for instance.
+Let's start by adding a <code>complexObject</code> property to the main application component:</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+
+  complexObject = {
+    name: {
+      firstName: 'Joan',
+      lastName: 'Doe'
+    },
+    email: 'joan.doe@mail.com'
+  };
+  
+}
+</code></pre>
+<p>As you see the property holds a User object with some nested properties. You can now render it using the <code>JsonPipe</code> pipe as below:</p>
+<pre><code class="language-html">&lt;h2&gt;Json&lt;/h2&gt;
+&lt;pre&gt;{{ complexObject | json }}&lt;/pre&gt;
+</code></pre>
+<p>That gives you the following output once application reloads:</p>
+<p><img src="images/pipes-json-01.png" alt="JSON Pipe" /></p>
+<p>This pipe does not have any additional parameters.</p>
+<h3 id="slice"><a class="header" href="#slice">Slice</a></h3>
+<p>The <code>SlicePipe</code> pipe extracts a section of a string or array into a new object.
+It performs a selection from a &quot;begin&quot; to an <code>end</code> index where the <code>end</code> does not get included in the resulting set.
+Note that the original string or array is not modified.</p>
+<blockquote>
+<p><strong>Slice Behavior</strong></p>
+<p>The implementation of this pipe is based on the standard <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/slice">Array.prototype.slice()</a>
+method for JavaScript Arrays, and <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/slice">String.prototype.slice()</a> method for
+JavaScript Strings.</p>
+<p>If needed, please refer to the corresponding API documentation for more details on how <code>slice</code> gets performed.</p>
+</blockquote>
+<h4 id="using-with-arrays"><a class="header" href="#using-with-arrays">Using with Arrays</a></h4>
+<p>The format when using the pipe with arrays and collections is the following:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ array_expression | slice:begin[:end] }}
+&lt;/element&gt;
+</code></pre>
+<p>First, add an initial collection of numbers to the main application component class, to be able testing the pipe:</p>
+<pre><code class="language-ts">// ...
+export class AppComponent {
+  // ...
+  
+  numberCollection = [0, 1, 2, 3, 4, 5, 6];
+}
+</code></pre>
+<p>As the next, try displaying first three items from the array by setting <code>begin</code> index to <code>0</code>
+to point to the start of the collection, and the <code>end</code> index to 3.</p>
+<pre><code class="language-html">&lt;h2&gt;Slice (arrays)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    First 3 items:
+    &lt;ul&gt;
+      &lt;li *ngFor=&quot;let num of numberCollection | slice:0:3&quot;&gt;{{num}}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Given the ending index is not included, the resulting subset should have the following items rendered: 0, 1, 2</p>
+<p><img src="images/pipes-slice-01.png" alt="" /></p>
+<p>You can also count items from the end of the array. For this purpose, you are going to use negative values for the <code>start</code> option.
+For example value <code>3</code> signals the pipe to start taking items from the third position from the beginning. 
+Using value <code>-3</code> makes the pipe count items from the end of the array. </p>
+<p>Let's now try negative values in action and display last 3 items from the numbers collection:</p>
+<pre><code class="language-html">&lt;h2&gt;Slice (arrays)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    Last 3 items:
+    &lt;ul&gt;
+      &lt;li *ngFor=&quot;let num of numberCollection | slice:-3&quot;&gt;{{num}}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>This time we do not need to specify the <code>end</code> index as we are going to take
+all array values starting with the third one from the end.</p>
+<p><img src="images/pipes-slice-02.png" alt="" /></p>
+<p>Feel free to experiment with <code>start</code> and <code>end</code> index values more
+to see how <code>SlicePipe</code> works with arrays depending on your conditions.</p>
+<h4 id="using-with-strings"><a class="header" href="#using-with-strings">Using with Strings</a></h4>
+<p>The format when using the pipe with strings is identical to that of the arrays.
+The <code>SlicePipe</code> pipe treats strings as arrays of characters,
+so you can apply the same <code>begin</code> and <code>end</code> parameters as you did earlier.</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ string_expression | slice:begin[:end] }}
+&lt;/element&gt;
+</code></pre>
+<p>Let's test this pipe with the &quot;Hello world!&quot; string and extract the first word:</p>
+<pre><code class="language-html">&lt;h2&gt;Slice (strings)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    First word of 'Hello world!':
+    {{ 'Hello world!' | slice:0:5 }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Upon application start, you should see that pipe successfully transformed the string value and rendered only the word &quot;Hello&quot;.</p>
+<p><img src="images/pipes-slice-03.png" alt="" /></p>
+<p>We can also take the last word by using negative number for the <code>begin</code> parameter value:</p>
+<pre><code class="language-html">&lt;h2&gt;Slice (strings)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    Last word of 'Hello world!':
+    {{ 'Hello world!' | slice:-6:-1 }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>You should see the word &quot;world&quot; rendered by the pipe as soon as your application reloads.</p>
+<p><img src="images/pipes-slice-04.png" alt="" /></p>
+<p>Note that we use <code>-1</code> for the <code>end</code> value because sentence ends with an exclamation mark
+that we want to exclude from the final output.
+Otherwise, you can omit the <code>end</code> setting entirely and leave just <code>-6</code> for the <code>start</code> value.</p>
+<h3 id="i18nselect"><a class="header" href="#i18nselect">I18nSelect</a></h3>
+<p>For the time being the <code>I18nSelectPipe</code> is an experimental pipe that allows you
+to render different strings from the object depending on the input value.</p>
+<blockquote>
+<p><strong>Experimental</strong></p>
+<p>Please note that this pipe is an experimental one and its functionality may change.
+We are going to update this section with new features for the <code>I18nSelectPipe</code> if they appear,
+or remove this warning if the pipe gets updated to the stable state.</p>
+</blockquote>
+<p>The usage format for this pipe is the following:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;expression&gt; | i18nSelect:mapping }}
+&lt;/element&gt;
+</code></pre>
+<p>The <code>mapping</code> is an object literal with properties.</p>
+<p>To see that in action you need to create two properties <code>titleMode</code> and <code>titleValues</code>.
+The <code>titleMode</code> property should be responsible for different title rendering modes,
+while <code>titleValues</code> contains different values for title content.</p>
+<pre><code class="language-ts">export class AppComponent {
+  titleMode = 'primary';
+  titleValues = {
+    primary: 'This is a primary title',
+    secondary: 'This is a secondary title',
+    other: 'This is an alternative title'
+  };
+}
+</code></pre>
+<p>Now we can wire both properties together in the component HTML template as below:</p>
+<pre><code class="language-html">&lt;h2&gt;I18nSelect&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;{{ titleMode | i18nSelect:titleValues }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Based on settings above there are four different values you can see on the screen at runtime:</p>
+<ul>
+<li><code>titleValues.primary</code> if <code>titleMode</code> property value equals to <code>primary</code>;</li>
+<li><code>titleValues.secondary</code> if <code>titleMode</code> property value equals to <code>secondary</code>;</li>
+<li><code>titleValues.other</code> as a fallback value if <code>titleMode</code> does not contain any of the values above;</li>
+<li>empty string, if <code>titleValues</code> object literal does not have <code>other</code> property defined, and <code>titleMode</code> contains &quot;unknown&quot; value;</li>
+</ul>
+<p>Given that by default <code>titleMode</code> property value is set to <code>primary</code>,
+you should see the following content once the application starts:</p>
+<p><img src="images/pipes-i18nselect-01.png" alt="" /></p>
+<p>Now try changing the value of the <code>titleMode</code> property to <code>secondary</code> like in the example below:</p>
+<pre><code class="language-ts">export class AppComponent {
+  
+  titleMode = 'secondary';
+  
+  // ...
+}
+</code></pre>
+<p>This time <code>I18nSelectPipe</code> is going to select and display <code>titleValues.secondary</code> value:</p>
+<p><img src="images/pipes-i18nselect-02.png" alt="" /></p>
+<p>For the next experiment, let's try setting <code>titleMode</code> to something <code>titleValues</code> does not contain a property for.
+For example, change the value to a &quot;something else&quot; string.</p>
+<pre><code class="language-ts">export class AppComponent {
+  
+  titleMode = 'something else';
+  
+  //...
+}
+</code></pre>
+<p>As soon as your page reloads you can see that <code>I18nSelectPipe</code> this time takes the <code>titleMode.other</code> content as a fallback value.</p>
+<p><img src="images/pipes-i18nselect-03.png" alt="" /></p>
+<p>Another good scenario for <code>I18nSelectPipe</code> is rendering text that gets adopted to some input criteria,
+for instance, <code>gender</code> value of the current user can be a good example:</p>
+<pre><code class="language-ts">export class AppComponent {
+  gender: string = 'male';
+  inviteMap: any = {
+    'male': 'Invite him.', 
+    'female': 'Invite her.', 
+    'other': 'Invite them.'
+  };
+}
+</code></pre>
+<p>Your component may display different user interface and content based on the <code>gender</code> value at run time.</p>
+<p>Finally, you an use the <code>I18nSelectPipe</code> pipe for localising text, the <code>i18n</code> prefix in its name stands for <code>internationalization</code>.
+Imagine you are implementing a colour picker button component, and you need to support multiple languages.
+You can easily split the translation support into two pieces: <code>currentLanguage</code> property holding currently used language code
+and a <code>buttonLabels</code> object containing all supported translations.</p>
+<p>Let's see that in practice by providing tree &quot;Pick colour&quot; labels translated into
+British English (<code>en-GB</code>), American English (<code>en-US</code>) and Ukrainian (<code>uk</code>).
+For all other languages that our component does not support out of the box,
+we are going to use <code>en-GB</code> locale via <code>other</code> property as a fallback option.</p>
+<pre><code class="language-ts">export class AppComponent {
+  currentLanguage = 'en-GB';
+  buttonLabels = {
+    'en-US': 'Pick a color',
+    'en-GB': 'Pick a colour',
+    'uk': 'Вибрати колiр',
+    'other': 'Pick a colour'
+  };
+}
+</code></pre>
+<p>Now switch to the HTML template of your application component or any other component
+you are using for testing purposes, and add the following content:</p>
+<pre><code class="language-html">&lt;h2&gt;I18nSelect&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;button&gt;{{ currentLanguage | i18nSelect:buttonLabels }}&lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>You should see the <code>en-GB</code> translation by default as per <code>currentLanguage</code> property value we set earlier:</p>
+<p><img src="images/pipes-i18nselect-04.png" alt="" /></p>
+<p>Now if you change the <code>currentLanguage</code> to &quot;uk&quot; code the button should have the following content rendered by <code>I18nSelectPipe</code>:</p>
+<p><img src="images/pipes-i18nselect-05.png" alt="" /></p>
+<p>Finally, if you change your <code>currentLanguage</code> property value to something
+that is not supported by default, like &quot;fr&quot; or &quot;it&quot; for instance,
+the pipe is going to switch to the &quot;other&quot; value at run time.</p>
+<h3 id="i18nplural"><a class="header" href="#i18nplural">I18nPlural</a></h3>
+<p>This pipe helps you with pluralizing your string values based on a number input value and optionally taking into account the current user's locale.</p>
+<blockquote>
+<p><strong>Experimental</strong></p>
+<p>Please note that this pipe is an experimental one and its functionality may change.
+We are going to update this section with new features for the <code>I18nPluralPipe</code> if they appear,
+or remove this warning if the pipe gets updated to the stable state.</p>
+</blockquote>
+<p>The usage format for the <code>I18nPluralPipe</code> is as following:</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;number_expression&gt; | i18nPlural:mapping }}
+&lt;/element&gt;
+</code></pre>
+<p>The <code>mapping</code> is an object literal with properties, represented in TypeScript
+by a dictionary containing key/value pairs of a string type.</p>
+<p>Let's imagine we have a list of posts to render on the page.
+Each post may also contain comments, so we are also going to show a list of comment instances in a user-friendly manner.</p>
+<p>Create a new application with Angular CLI or open an existing one,
+and append the following content to the main application controller:</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+  
+  posts = [
+    {
+      content: 'Post 1 content',
+      commentsCount: 0,
+    },
+    {
+      content: 'Post 2 content',
+      commentsCount: 1
+    },
+    {
+      content: 'Post 3 content',
+      commentsCount: 10
+    }
+  ];
+}
+</code></pre>
+<p>We have a collection of three simple posts with comment counters as <code>commentsCount</code> properties holding different number values.</p>
+<p>There are at least three different cases for display value formatting in our case:</p>
+<ul>
+<li>0 comments: special message for zero values</li>
+<li>1 comment: singular form of the message</li>
+<li>2+ comments: plural form of the message</li>
+</ul>
+<p>Now let's create a mapping dictionary to hold string values for all the use cases above:</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+
+  commentLabels: { [key: string]: string } = {
+    '=0': 'There are no comments for this post.',
+    '=1': 'There is one comment for this post.',
+    'other': 'There are # comments for this post.'
+  };
+}
+</code></pre>
+<p>Finally we are ready to see <code>I18nPluralPipe</code> in action.
+Append the following HTML to the component template:</p>
+<pre><code class="language-html">&lt;h2&gt;I18nPluralPipe&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let post of posts&quot;&gt;
+    {{ post.content }}
+    &lt;ul&gt;
+      &lt;li&gt;{{ post.commentsCount | i18nPlural: commentLabels }}&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>So this is how the output result should look like when the application starts:</p>
+<p><img src="images/pipes-i18nPlural-01.png" alt="" /></p>
+<h3 id="async"><a class="header" href="#async">Async</a></h3>
+<p>The <code>AsyncPipe</code> pipe subscribes to an instance of a <code>Promise</code> or <code>Observable</code>
+and transforms the underlying value upon every change.</p>
+<pre><code class="language-html">&lt;element&gt;
+  {{ &lt;expression&gt; | async }}
+&lt;/element&gt;
+</code></pre>
+<p>The <code>expression</code> can take a value of either <code>Observable</code> or a <code>Promise</code> type.</p>
+<blockquote>
+<p><strong>Unsubscribing</strong></p>
+<p>When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.</p>
+</blockquote>
+<h4 id="using-with-ngfor-directive"><a class="header" href="#using-with-ngfor-directive">Using with NgFor directive</a></h4>
+<p>Let's try to display a list of comments based on an <code>Observable</code>.
+First, create a <code>comments</code> property in your application component class:</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+  
+  comments: Observable&lt;string[]&gt;;
+}
+</code></pre>
+<p>We are going to render an unordered list of comments; we also need a button to fetch comments from the server
+and update <code>comments</code> observable with new values.</p>
+<p>Open the HTML template of the main application component and append the following:</p>
+<pre><code class="language-html">&lt;h2&gt;Async&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li *ngFor=&quot;let comment of comments | async&quot;&gt;
+    {{ comment }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;button (click)=&quot;checkComments()&quot;&gt;Check comments&lt;/button&gt;
+</code></pre>
+<p>For the sake of simplicity, we are not going to make any HTTP calls on the <code>checkComments</code> call.
+Let's just return a predefined set of comments after a short delay to emulate delays with a response.</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+  
+  comments: Observable&lt;string[]&gt;;
+
+  checkComments() {
+    this.comments = new Observable(observer =&gt; {
+      observer.next([
+        'Comment 1',
+        'Comment 2',
+        'Comment 3'
+      ]);
+    }).delay(1000);
+  }
+}
+</code></pre>
+<p>The <code>checkComments</code> method sets <code>comments</code> variable value to an observable that evaluates with 1-second delay
+and returns a set of sample comments.</p>
+<p>For testing purposes you can also add a button to reset comments:</p>
+<pre><code class="language-html">&lt;button (click)=&quot;resetComments()&quot;&gt;Reset comments&lt;/button&gt;
+</code></pre>
+<p>The corresponding <code>resetComments</code> method is going to just set the <code>comments</code> value to <code>null</code>.</p>
+<pre><code class="language-ts">export class AppComponent {
+  // ...
+  
+  resetComments() {
+    this.comments = null;
+  }
+}
+</code></pre>
+<p>If you now run the application the main page should look like the following:</p>
+<p><img src="images/pipes-async-03.png" alt="" /></p>
+<p>Try clicking the <code>Check comments</code> button and the results should get displayed in 1 second:</p>
+<p><img src="images/pipes-async-01.png" alt="" /></p>
+<h4 id="using-with-date-object"><a class="header" href="#using-with-date-object">Using with Date object</a></h4>
+<p>Another good example to demonstrate the <code>AsyncPipe</code> in action is  displaying current time on the page.
+Our component needs to implement standard <code>OnInit</code> interface to setup <code>currentTime</code> observable once it is ready.</p>
+<pre><code class="language-ts">import { /*...,*/ OnInit } from '@angular/core';
+
+export class AppComponent implements OnInit {
+  // ...
+
+  currentTime: Observable&lt;Date&gt;;
+
+  ngOnInit() {
+    this.currentTime = new Observable&lt;Date&gt;(observer =&gt; {
+      setInterval(_ =&gt; observer.next(new Date()), 1000);
+    });
+  }
+}
+</code></pre>
+<p>Upon initialization, the component assigns an <code>Observable</code> of <code>Date</code> type to the <code>currentTime</code> property.
+The Observable instance updates the underlying value to a new <code>Date</code> object every second,
+that causes <code>AsyncPipe</code> to render new date automatically.</p>
+<p>As Angular allows chaining multiple pipes together, you can also use a <code>DatePipe</code> to format resulting output
+to display only the time portion of the date.</p>
+<p>You can get the basic HTML template for the application component below:</p>
+<pre><code class="language-html">&lt;h2&gt;Async (date/time)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    Current time: {{ currentTime | async | date:'mediumTime' }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Once application compiles and starts you should get a time value updated every second:</p>
+<p><img src="images/pipes-async-02.png" alt="" /></p>
+<blockquote>
+<p><strong>Source Code</strong></p>
+<p>You can find the source code in the
+<strong><a href="https://github.com/DenysVuika/developing-with-angular/tree/master/angular/pipes/standard-pipes">angular/pipes/standard-pipes</a></strong> folder.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="ch09-02-chaining-pipes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="ch09-04-custom-pipes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="ch09-02-chaining-pipes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="ch09-04-custom-pipes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+        <!-- Google Analytics Tag -->
+        <script type="text/javascript">
+            var localAddrs = ["localhost", "127.0.0.1", ""];
+
+            // make sure we don't activate google analytics if the developer is
+            // inspecting the book locally...
+            if (localAddrs.indexOf(document.location.hostname) === -1) {
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'G-23X2CQXZ48', 'auto');
+                ga('send', 'pageview');
+            }
+        </script>
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
