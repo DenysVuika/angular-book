@@ -3,14 +3,9 @@
 [The Angular Book](title-page.md)
 [Introduction](ch00-00-introduction.md)
 
-## Prerequisites
-
 - [Prerequisites](ch01-00-prerequisites.md)
   - [Node](ch01-01-node.md)
   - [Visual Studio Code](ch01-02-vscode.md)
-
-## ES6
-
 - [ES6](ch02-00-es6.md)
   - [Classes](ch02-01-classes.md)
   - [Inheritance](ch02-02-inheritance.md)
@@ -20,9 +15,6 @@
   - [Destructuring Assignment](ch02-06-destructuring.md)
   - [Modules](ch02-07-modules.md)
   - [See Also](ch02-08-see-also.md)
-
-## TypeScript
-
 - [TypeScript](ch03-00-typescript.md)
   - [Getting Started](ch03-01-getting-started.md)
   - [TypeScript Features](ch03-02-features.md)
@@ -32,9 +24,6 @@
     - [Abstract Classes](ch03-06-abstract-classes.md)
     - [Modules](ch03-07-modules.md)
     - [Decorators](ch03-08-decorators.md)
-
-## Angular
-
 - [Angular CLI](ch04-00-angular-cli.md)
   - [Installing](ch04-01-installing.md)
   - [Your First Application](ch04-02-first-application.md)
@@ -47,7 +36,6 @@
   - [Creating Modules](ch04-09-creating-modules.md)
   - [Routing Support](ch04-10-routing-support.md)
   - [Generating Standalone Scripts](ch04-11-generating-standalone-scripts.md)
-
 - [Components](ch05-00-components.md)
   - [Creating a Simple Component](ch05-01-creating-a-simple-component.md)
   - [Generating Components with Angular CLI](ch05-02-generating-components-with-angular-cli.md)
@@ -98,22 +86,14 @@
   - [Using Translate Pipe](ch11-03-using-translate-pipe.md)
   - [Switching Languages](ch11-04-switching-languages.md)
   - [Summary](ch11-05-summary.md)
-
-## Libraries
-
 - [Reusable Component Libraries](ch12-00-reusable-component-libraries.md)
   - [Creating New Application](ch12-01-creating-new-application.md)
   - [Creating Component Libraries](ch12-02-creating-component-libraries.md)
   - [Building the Packages](ch12-03-building-the-packages.md)
   - [Publishing to NPM](ch12-04-publishing-to-npm.md)
   - [See Also](ch12-05-see-also.md)
-
-## Advanced Angular
-
-- [Dynamic Content]()
-
-## Docker
-
+- [Dynamic Content](ch13-00-dynamic-content.md)
+- [Plugins]()
 - [Using with Docker]()
   - [Additional Resources]()
   - [Preparing new project]()
@@ -123,18 +103,12 @@
   - [Consuming from Docker Hub]()
   - [Automating with Travis]()
   - [See also]()
-
-## Webpack
-
 - [Webpack]()
   - [Initial project structure]()
   - [Typescript configuration]()
   - [Basic webpack setup]()
   - [Advanced webpack setup]()
   - [Unit testing]()
-
-## Misc
-
 - [Building a Mobile App with Cordova and Angular]()
   - [Installing command-line tools]()
   - [Generating a new Angular App]()
