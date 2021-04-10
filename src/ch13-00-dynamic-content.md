@@ -1,6 +1,6 @@
 # Dynamic Content in Angular
 
-> Warning, this chapter was written for the earlier versions of Angular and needs review.
+> Warning: this chapter was written using the earlier versions of Angular and needs review.
 
 In this section, we are going to see in practice different ways
 of dynamically creating and modifying content in Angular at runtime.

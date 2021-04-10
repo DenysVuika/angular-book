@@ -93,7 +93,7 @@
   - [Publishing to NPM](ch12-04-publishing-to-npm.md)
   - [See Also](ch12-05-see-also.md)
 - [Dynamic Content](ch13-00-dynamic-content.md)
-- [Plugins]()
+- [Plugins](ch14-00-plugins.md)
 - [Using with Docker]()
   - [Additional Resources]()
   - [Preparing new project]()
