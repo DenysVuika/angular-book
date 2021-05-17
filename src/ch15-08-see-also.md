@@ -1,4 +1,4 @@
-## See also
+## See Also
 
 [Using Docker in Builds](https://docs.travis-ci.com/user/docker/)
 
