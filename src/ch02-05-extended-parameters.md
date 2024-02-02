@@ -80,7 +80,7 @@ Hello,
 world!
 ```
 
-Rest parameters become even more valuable when you need collecting arguments starting from a different position.
+Rest parameters become even more valuable when you have one or more required parameters followed by an arbitrary number of additional parameters.
 
 In the next example, the rest parameter is used to collect arguments from the second one to the end of the array.
 
