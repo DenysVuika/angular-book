@@ -194,10 +194,10 @@ let booksToRead = books.filter(b =&gt; { return !b.read; });
 <p>Arrow functions provide more expressive closure syntax.</p>
 <pre><code class="language-js">// ES6
 // list the books I've read
-books.forEach(b =&gt; {
-    if (book.read) {
-        console.log(b.name);
-    }
+books.forEach(book =&gt; {
+  if (book.read) {
+    console.log(book.name);
+  }
 });
 </code></pre>
 <p>And another example using DOM:</p>
