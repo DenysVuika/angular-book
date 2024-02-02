@@ -40,10 +40,10 @@ Arrow functions provide more expressive closure syntax.
 ```js
 // ES6
 // list the books I've read
-books.forEach(b => {
-    if (book.read) {
-        console.log(b.name);
-    }
+books.forEach(book => {
+  if (book.read) {
+    console.log(book.name);
+  }
 });
 ```
 
