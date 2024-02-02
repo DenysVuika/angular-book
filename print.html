@@ -521,7 +521,7 @@ logMessages('Hello,', 'world!');
 <pre><code class="language-text">Hello, 
 world!
 </code></pre>
-<p>Rest parameters become even more valuable when you need collecting arguments starting from a different position.</p>
+<p>Rest parameters become even more valuable when you have one or more required parameters followed by an arbitrary number of additional parameters.</p>
 <p>In the next example, the rest parameter is used to collect arguments from the second one to the end of the array.</p>
 <pre><code class="language-js">// ES6
 function greet(message, ...friends) {
