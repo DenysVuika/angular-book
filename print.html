@@ -5048,7 +5048,7 @@ export interface LogPlugin {
 @Injectable({ providedIn: 'root' })
 export class CompositeLogService {
 
-  constructor(@Inject(LOGGER_PLUGIN) plugins: LogPlugin[]) {
+  constructor(@Inject(LOGGER_PLUGIN) private plugins: LogPlugin[]) {
     if (plugins &amp;&amp; plugins.length &gt; 0) {
       for (const plugin of plugins) {
         console.log(`Loading plugin: ${plugin.name} (level: ${plugin.level})`);
