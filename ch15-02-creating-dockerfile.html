@@ -8,6 +8,16 @@
 
         <!-- Custom HTML head -->
         
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-23X2CQXZ48"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-23X2CQXZ48');
+        </script>
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -266,22 +276,6 @@ Please refer to that article if you want to get more information on available op
         </div>
 
 
-        <!-- Google Analytics Tag -->
-        <script>
-            var localAddrs = ["localhost", "127.0.0.1", ""];
-
-            // make sure we don't activate google analytics if the developer is
-            // inspecting the book locally...
-            if (localAddrs.indexOf(document.location.hostname) === -1) {
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-                ga('create', 'G-23X2CQXZ48', 'auto');
-                ga('send', 'pageview');
-            }
-        </script>
 
 
         <script>
