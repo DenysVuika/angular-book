@@ -3,7 +3,7 @@
 An _interface_ is a description of the actions that an object can do.
 
 You might already be familiar with _interfaces_ in other programming languages like C# and Java,
-or _contracts_ in Swift.
+or _protocols_ in Swift.
 
 Interfaces are not part of the ECMAScript.
 It is a level of abstraction supported by TypeScript to improve the type-checking process, and not converted to JavaScript code.
